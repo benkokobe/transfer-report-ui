@@ -3,16 +3,39 @@ package com.bko.domain;
 import java.util.List;
 
 public class Patch {
+
+	private String patchId;
+	private String nomGrp;
+	private String sujPat;
+	private String verPat;
+	private String synopsis;
+	private String typEvl;
+	private String status;
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getTypEvl() {
+		return typEvl;
+	}
+	public void setTypEvl(String typEvl) {
+		this.typEvl = typEvl;
+	}
 	public String getPatchId() {
 		return patchId;
 	}
 	public void setPatchId(String patchId) {
 		this.patchId = patchId;
 	}
-	private String patchId;
-	private String nomGrp;
-	private String sujPat;
-	private String verPat;
+	public String getSynopsis() {
+		return synopsis;
+	}
+	public void setSynopsis(String synopsis) {
+		this.synopsis = synopsis;
+	}
 	public String getNomGrp() {
 		return nomGrp;
 	}

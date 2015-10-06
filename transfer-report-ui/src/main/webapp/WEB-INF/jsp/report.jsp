@@ -33,5 +33,5 @@
 		</table>
 	</td></tr>
 </table>
-Click <a href="generate.xls?drName=${deploymentRequest.drName}">here</a> to generate an excel report.
+Click <a href="${deploymentRequest.drName}.xls?drName=${deploymentRequest.drName}">here</a> to generate an excel report.
 </div>

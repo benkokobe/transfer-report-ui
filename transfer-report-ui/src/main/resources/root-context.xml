@@ -23,7 +23,9 @@
         <property name="username" value="${spring.datasource.username}"/>
         <property name="password" value="${spring.datasource.password}"/>
     </bean>
-    
+    <!--  validator -->
+    <bean id="fileValidator"
+		class="com.bko.validators.FileValidator" />
     <!-- service -->
     <bean id="deploymentRequestService" class="com.bko.service.DeploymentRequestServiceImpl">
 		<property name="deploymentRequestDao" ref="deploymentRequestDao"/>
@@ -31,10 +33,9 @@
 	<bean id="patchService" class="com.bko.service.PatchServiceImpl">
 		<property name="patchDao" ref="patchDao"/>
 	</bean>
-	<!--  <bean id="patchTaskService" class="com.bko.service.PatchTaskServiceImpl">
+	<bean id="patchTaskService" class="com.bko.service.PatchTaskServiceImpl">
 		<property name="patchTaskDao" ref="patchTask"/>
 	</bean>
-	-->
 	
 	
 	<!-- Persistence -->
@@ -42,6 +43,9 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	<bean id="patchDao" class="com.bko.persistence.PatchDaoImpl">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<bean id="patchTask" class="com.bko.persistence.PatchTaskDaoImpl">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	

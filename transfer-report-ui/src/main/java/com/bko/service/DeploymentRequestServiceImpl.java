@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.bko.domain.DeploymentRequestTransferOperation;
 import com.bko.domain.Patch;
 import com.bko.domain.PatchMember;
 import com.bko.domain.TransferOperation;
@@ -35,7 +36,7 @@ public class DeploymentRequestServiceImpl implements DeploymentRequestService{
 	}
 	*/
 
-	public List<TransferOperation> getTransferOperation(String deploymentRequest) {
+	public List<DeploymentRequestTransferOperation> getTransferOperation(String deploymentRequest) {
 		return this.deploymentRequestDao.getTransferOperation(deploymentRequest);
 	}
 
@@ -61,6 +62,31 @@ public class DeploymentRequestServiceImpl implements DeploymentRequestService{
 	@Override
 	public int getnumberOfTransferOperations(String deploymentRequestName) {
 		return this.deploymentRequestDao.getnumberOfTransferOperations(deploymentRequestName);
+	}
+
+	@Override
+	public int getNumberOfManualTransferOperations(String deploymentRequestName) {
+		return this.deploymentRequestDao.getNumberOfManualTransferOperations(deploymentRequestName);
+	}
+
+	@Override
+	public int getNumberOfSubjects(String deploymentRequestName) {
+		return this.deploymentRequestDao.getNumberOfSubjects(deploymentRequestName);
+	}
+
+	@Override
+	public String getEnvDst(String deploymentRequestName) {
+		return this.deploymentRequestDao.getEnvDst(deploymentRequestName);
+	}
+
+	@Override
+	public String getEnvSrc(String deploymentRequestName) {
+		return this.deploymentRequestDao.getEnvSrc(deploymentRequestName);
+	}
+
+	@Override
+	public String getSynopsis(String deploymentRequestName) {
+		return this.deploymentRequestDao.getSynopsis(deploymentRequestName);
 	}
 
 }

@@ -7,6 +7,7 @@ import java.util.Locale;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -33,6 +34,12 @@ public class GenerationController {
     @Autowired
 	private PatchService patchService;
     
+    @Value("${env.name}")
+	private String env_name;
+    
+    @Value("${spring.datasource.url}")
+    private String db_url;
+    
     
     
     private DeploymentRequest deploymentRequest;
@@ -48,7 +55,9 @@ public class GenerationController {
 		this.deploymentRequest = new DeploymentRequest();
 		//this.deploymentRequest.setDrName(deploymentRequestName);
 		model.addAttribute("deploymentRequest", this.deploymentRequest);
-		model.addAttribute("serverTime", formattedDate );
+		logger.info("env_name:" + env_name);
+		model.addAttribute("env_name", env_name );
+		model.addAttribute("db_url", db_url );
 		
 		return "start";
 	}
@@ -60,15 +69,21 @@ public class GenerationController {
 		//this.deploymentRequest = new DeploymentRequest();
 		
 		deploymentRequest.setPatchList(deploymentRequestService.getPatchList(deploymentRequestName));
+		deploymentRequest.setSynopsis(deploymentRequestService.getSynopsis(deploymentRequestName));
 		deploymentRequest.setNumberOfPatches(deploymentRequestService.getNumberOfPatches(deploymentRequestName));
 		deploymentRequest.setNumberOfTransferOperations(deploymentRequestService.getnumberOfTransferOperations(deploymentRequestName));
+		deploymentRequest.setNumberOfManualTransferOperations(deploymentRequestService.getNumberOfManualTransferOperations(deploymentRequestName));
+		deploymentRequest.setNumberOfSubjects(deploymentRequestService.getNumberOfSubjects(deploymentRequestName));
 		
 		logger.info("getNumberOfPatches: " + deploymentRequest.getNumberOfPatches());
+		
+		model.addAttribute("env_name", env_name );
+		model.addAttribute("db_url", db_url );
 		
 		return "DRdetails";
 	}
 	//@RequestMapping(value="generate*", method = RequestMethod.GET)
-	@RequestMapping(value= "/generate.xls", method = RequestMethod.GET)
+	@RequestMapping(value= "/*", method = RequestMethod.GET)
 	public String submitForm(@RequestParam(required = true, value = "drName") String deploymentRequestName, 
 			Model model) {
 		

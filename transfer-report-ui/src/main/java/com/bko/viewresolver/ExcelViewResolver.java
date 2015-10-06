@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ViewResolver;
 import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
 
-//@Component
+@Component
 public class ExcelViewResolver implements ViewResolver{
 	
 	@Autowired
@@ -23,7 +23,8 @@ public class ExcelViewResolver implements ViewResolver{
 		//ExcelView view = new ExcelView();
 		System.out.println("Calling new ExcelGenerator");
 		
-		ExcelGenerator view = new ExcelGenerator();
+		//ExcelGenerator view = new ExcelGenerator();
+		ExcelGeneratorFromTemplate view = new ExcelGeneratorFromTemplate();
 		view.setPatchService(patchService);
 		view.setDeploymentRequestService(deploymentRequestService);
 		//System.out.println("ExcelViewResolver:" + deploymentRequestService.getNumberOfPatches("PACK-PND-0691"));

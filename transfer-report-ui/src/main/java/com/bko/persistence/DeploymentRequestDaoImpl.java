@@ -13,9 +13,10 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
+import com.bko.domain.DeploymentRequestTransferOperation;
 import com.bko.domain.Patch;
 import com.bko.domain.PatchMember;
-import com.bko.domain.TransferOperation;
+import com.bko.domain.DeploymentRequestTransferOperation;
 
 public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 
@@ -37,7 +38,8 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 			MapSqlParameterSource params = new MapSqlParameterSource();
 			params.addValue("NAMLOT", NAMLOT);
 
-			String sql = "SELECT REFPAT FROM YSW11 WHERE SYNDPR  = (SELECT SYNDPR FROM YSW10 WHERE NOMDPR = :NAMLOT)";
+			//String sql = "SELECT REFPAT FROM YSW11 WHERE SYNDPR  = (SELECT SYNDPR FROM YSW10 WHERE NOMDPR = :NAMLOT)";
+			String sql = "SELECT refmai FROM yfd06 WHERE reflot  = (select reflot from yfd05 where namlot =:NAMLOT)";
 
 			logger.info("SQL getPatchList: " + ":" + NAMLOT + ":" + sql);
 
@@ -59,10 +61,11 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 			MapSqlParameterSource params = new MapSqlParameterSource();
 			params.addValue("NOMDPR", drName);
 			StringBuilder builder = new StringBuilder();
-			builder.append(" select refpat, nommbr, typmbr, typact from ypd02_syn where refpat in ( ");
-			builder.append(" select refpat from ysw11 where syndpr = (");
-			builder.append(" select syndpr from ysw10 where nomdpr =:NOMDPR ) )");
-			builder.append(" order by refpat ");
+			//builder.append(" select refpat, nommbr, typmbr, typact from ypd02_syn where refpat in ( ");
+			builder.append(" select refmai, nommbr, typmbr, typact from yed02 where refmai in ( ");
+			builder.append(" SELECT refmai FROM yfd06 WHERE reflot  = (select reflot from yfd05 where namlot =:NOMDPR))");
+			//builder.append(" select syndpr from ysw10 where nomdpr =:NOMDPR ) )");
+			builder.append(" order by refmai ");
 
 			String query = builder.toString();
 			logger.info("SQL get DRmembers:" + query);
@@ -82,7 +85,8 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("NAMLOT", deploymentRequestName);
-		String query = "select count(*) FROM YSW11 WHERE SYNDPR  = (SELECT SYNDPR FROM YSW10 WHERE NOMDPR = :NAMLOT)";
+		//String query = "select count(*) FROM YSW11 WHERE SYNDPR  = (SELECT SYNDPR FROM YSW10 WHERE NOMDPR = :NAMLOT)";
+		String query = "select count(*) FROM yfd06 WHERE reflot  = (select reflot from yfd05 where namlot =:NAMLOT)";
 
 		// return jdbcTemplate.queryForInt(query, params); --> deprecated so use
 		// queryForObject
@@ -91,7 +95,7 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 		return numberOfPatches;
 	}
 
-	public List<TransferOperation> getTransferOperation(String NAMLOT) {
+	public List<DeploymentRequestTransferOperation> getTransferOperation(String NAMLOT) {
 
 		logger.info("getTransferOperation");
 		try {
@@ -99,28 +103,37 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 			params.addValue("NAMLOT", NAMLOT);
 			String query = "select * from yfd07 where reflot = (select reflot from yfd05 where namlot =:NAMLOT)";
 
-			List<TransferOperation> transferOperationList = jdbcTemplate.query(
+			List<DeploymentRequestTransferOperation> transferOperationList = jdbcTemplate.query(
 					query, params, new TransferOperationsRowMapper());
 			return transferOperationList;
 		} catch (DataAccessException exc) {
 			logger.error("FAILED to get transfer op. List " + exc);
-			return new ArrayList<TransferOperation>();
+			return new ArrayList<DeploymentRequestTransferOperation>();
 		}
 	}
 
 	public class TransferOperationsRowMapper implements RowMapper {
 
-		public TransferOperation mapRow(ResultSet rs, int rowNum)
+		public DeploymentRequestTransferOperation mapRow(ResultSet rs, int rowNum)
 				throws SQLException {
 			// I use JDK 5 so I do not have to wrap int with an Integer object
-			TransferOperation transferOperation = new TransferOperation();
-			transferOperation.setIttCmd(rs.getString("ITTCMD"));
-			transferOperation.setPatchRef(rs.getString("REFMAI"));
+			DeploymentRequestTransferOperation transferOperation = new DeploymentRequestTransferOperation();
+			transferOperation.setIttcmd(rs.getString("ITTCMD"));
+			transferOperation.setRefmai(rs.getString("REFMAI"));
 			transferOperation.setBypass(rs.getString("BYPASS"));
-			transferOperation.setSwiChk(rs.getString("SWICHK"));
-			transferOperation.setSwiMan(rs.getString("SWIMAN"));
-			transferOperation.setTypTft(rs.getString("TYPTFT"));
-			transferOperation.setStpAll(rs.getString("STPALL"));
+			transferOperation.setSwichk(rs.getString("SWICHK"));
+			transferOperation.setSwiman(rs.getString("SWIMAN"));
+			transferOperation.setTyptft(rs.getString("TYPTFT"));
+			transferOperation.setStpall(rs.getString("STPALL"));
+			transferOperation.setReflot(rs.getString("REFLOT"));
+			transferOperation.setOrdopn(rs.getString("ORDOPN"));
+			transferOperation.setNumstp(rs.getString("NUMSTP"));
+			transferOperation.setTypopn(rs.getString("TYPOPN"));
+			transferOperation.setVernum(rs.getString("VERNUM"));
+			transferOperation.setSwimlt(rs.getString("SWIMLT"));
+			transferOperation.setNomgrp(rs.getString("NOMGRP"));
+			//transferOperation.setIdtent(rs.getString("IDTENT"));
+			transferOperation.setIttcmd(rs.getString("ITTCMD"));
 			return transferOperation;
 		}
 	}
@@ -150,7 +163,7 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 			// I use JDK 5 so I do not have to wrap int with an Integer object
 			// System.out.println("PatchListRowMapper");
 			Patch patch = new Patch();
-			patch.setPatchId(rs.getString("REFPAT"));
+			patch.setPatchId(rs.getString("REFMAI"));
 			// System.out.println("RESULT: " + rs.getString("REFPAT"));
 			return patch;
 		}
@@ -161,7 +174,8 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 		public PatchMember mapRow(ResultSet rs, int rowNum) throws SQLException {
 			// I use JDK 5 so I do not have to wrap int with an Integer object
 			PatchMember patchMember = new PatchMember();
-			patchMember.setPatchId(rs.getString("REFPAT"));
+			//patchMember.setPatchId(rs.getString("REFPAT"));
+			patchMember.setPatchId(rs.getString("REFMAI"));
 			patchMember.setPatchMember(rs.getString("NOMMBR"));
 			patchMember.setMemberType(rs.getString("TYPMBR"));
 			patchMember.setTypAct(rs.getString("TYPACT"));
@@ -182,6 +196,52 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 		int numberOfTransferOp= jdbcTemplate.queryForObject(query, params, Integer.class);
 		logger.info("No. of transfer operations:" + numberOfTransferOp);
 		return numberOfTransferOp;
+	}
+	public int getNumberOfManualTransferOperations(String deploymentRequestName){
+		logger.info("getNumberOfManualTransferOperations");
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("NAMLOT", deploymentRequestName);
+		String query = "select count(*) from yfd07 where reflot = (select reflot from yfd05 where namlot =:NAMLOT) and swiman = 'Y'";
+		int numberOfManualTransferOp= jdbcTemplate.queryForObject(query, params, Integer.class);
+		logger.info("No. of transfer operations:" + numberOfManualTransferOp);
+		return numberOfManualTransferOp;
+		
+	}
+	public int getNumberOfSubjects(String deploymentRequestName){
+		logger.info("getNumberOfSubjects");
+		
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("NAMLOT", deploymentRequestName);
+		//String query = "select count(distinct sujpat) from ypd01_syn where refpat in (select refpat from ysw11 where syndpr = (select syndpr from ysw10 where nomdpr=:NAMLOT))";
+		String query = "select count(distinct sujpat) from ysw12 where refpat in (select refpat from ysw11 where syndpr = (select syndpr from ysw10 where nomdpr=:NAMLOT))";
+		int numberOfSubjects= jdbcTemplate.queryForObject(query, params, Integer.class);
+		logger.info("No. of numberOfSubjects:" + numberOfSubjects);
+		return numberOfSubjects;
+	}
+	public String getEnvDst(String deploymentRequestName){
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("NAMLOT", deploymentRequestName);
+		String query = "select envdst from ysw10 where nomdpr=:NAMLOT";
+		String envDst= jdbcTemplate.queryForObject(query, params, String.class);
+		logger.info("DR destination environment:" + envDst);
+		return envDst;
+	}
+	public String getEnvSrc(String deploymentRequestName){
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("NAMLOT", deploymentRequestName);
+		String query = "select envsrc from ysw10 where nomdpr=:NAMLOT";
+		String envSrc= jdbcTemplate.queryForObject(query, params, String.class);
+		logger.info("DR source environment:" + envSrc);
+		return envSrc;
+	}
+	public String getSynopsis(String deploymentRequestName){
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("NAMLOT", deploymentRequestName);
+		String query = "select ittdpr from ysw10 where nomdpr=:NAMLOT";
+		String ittdpr= jdbcTemplate.queryForObject(query, params, String.class);
+		
+		logger.info("DR synopsis:" + ittdpr);
+		return ittdpr;
 	}
 
 }

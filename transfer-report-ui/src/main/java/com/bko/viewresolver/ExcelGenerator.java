@@ -1,5 +1,6 @@
 package com.bko.viewresolver;
 
+import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.document.AbstractExcelView;
 
 import com.bko.domain.DeploymentRequest;
+import com.bko.domain.DeploymentRequestTransferOperation;
 import com.bko.domain.Patch;
 import com.bko.domain.PatchMember;
 import com.bko.domain.TransferOperation;
@@ -44,14 +46,18 @@ public class ExcelGenerator extends AbstractExcelView {
 		this.deploymentRequestService = deploymentRequestService;
 	}
 
+	private String generatedFileName;
+	private FileOutputStream generatedFile;
+	
 	private DeploymentRequest deploymentRequest;
 
 	private String deploymentRequestName;
 
 	private List<Patch> patchList;
+	
+	private String drName;
 
-	private static final Logger log = LoggerFactory
-			.getLogger(ExcelGenerator.class);
+	private static final Logger log = LoggerFactory.getLogger(ExcelGenerator.class);
 
 	// private ArrayList<TransferOperationRule> transferOperationRuleList;
 
@@ -74,8 +80,9 @@ public class ExcelGenerator extends AbstractExcelView {
 			columnMembersListPatchReference, columnMembersListMemberType,
 			columnMembersListActionType, columnMembersListMemberName,
 			columnMembersListTouchyMember, columnStepAll, cell_32, cell_33,
-			cell_34, cell_35, columnCategory, columnComplement, cell_41,
-			cell_42, cell_43, cell_44, cell_51, cell_52, cell_61, cell_62,
+			cell_34, cell_35, columnCategory, columnComplement, cell_36,cell_37, cell_38, 
+			     cell_39, cell_391, cell_392,cell_393,cell_394,cell_395, 
+			cell_41,cell_42, cell_43, cell_44, cell_51, cell_52, cell_61, cell_62,
 			cell_63;
 
 	Row rowPatchList, rowPatchMembersList, rowTransferOperationList, row4,
@@ -86,7 +93,6 @@ public class ExcelGenerator extends AbstractExcelView {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 
-		// this.workbook = new HSSFWorkbook();
 
 		this.sheet1 = wb.createSheet("Patch List");
 		this.sheet2 = wb.createSheet("Patch members list");
@@ -105,11 +111,22 @@ public class ExcelGenerator extends AbstractExcelView {
 		this.patchList = this.deploymentRequest.getPatchList();
 
 		this.deploymentRequest.setPatchList(patchList);
+		
+		this.drName = this.deploymentRequest.getDrName();
+		
+		this.generatedFileName = this.drName + "-1.xls";
+		this.generatedFile = new FileOutputStream(generatedFileName);
 
 		log.info("buildExcelDocument() :Name of the DR    :" + this.deploymentRequest.getDrName());
 		log.info("buildExcelDocument() :Size of patch list:" + this.deploymentRequest.getPatchList().size());
 
 		generateList(wb);
+		log.info("To generate file:"+ generatedFileName);
+		wb.write(generatedFile);
+		
+		this.generatedFile.flush();
+		this.generatedFile.close();
+		
 
 	}
 	
@@ -264,7 +281,7 @@ public class ExcelGenerator extends AbstractExcelView {
 
 	public void generateTransferOperation(HSSFWorkbook wb) {
 
-		List<TransferOperation> transferOperationList = this.deploymentRequestService.getTransferOperation(this.deploymentRequest.getDrName());
+		List<DeploymentRequestTransferOperation> transferOperationList = this.deploymentRequestService.getTransferOperation(this.deploymentRequest.getDrName());
 
 		HSSFCellStyle myStyle = wb.createCellStyle();
 
@@ -278,6 +295,7 @@ public class ExcelGenerator extends AbstractExcelView {
 		rowTransferOperationList = sheet3.createRow((short) 0);
 		// category and complement
 		// TODO: refactor column names
+		sheet3.createFreezePane(0, 1);
 		columnCategory = rowTransferOperationList.createCell((short) 0);
 		columnComplement = rowTransferOperationList.createCell((short) 1);
 
@@ -286,6 +304,16 @@ public class ExcelGenerator extends AbstractExcelView {
 		cell_33 = rowTransferOperationList.createCell((short) 4);
 		cell_34 = rowTransferOperationList.createCell((short) 5);
 		cell_35 = rowTransferOperationList.createCell((short) 6);
+		cell_36 = rowTransferOperationList.createCell((short) 7);
+		cell_37 = rowTransferOperationList.createCell((short) 8);
+		cell_38 = rowTransferOperationList.createCell((short) 9);
+		cell_39 = rowTransferOperationList.createCell((short) 10);
+		
+		cell_391 = rowTransferOperationList.createCell((short)11);
+		cell_392 = rowTransferOperationList.createCell((short) 12);
+		cell_393 = rowTransferOperationList.createCell((short) 13);
+		cell_394 = rowTransferOperationList.createCell((short) 14);
+		cell_395 = rowTransferOperationList.createCell((short) 15);
 
 		columnCategory.setCellStyle(myStyle);
 		columnComplement.setCellStyle(myStyle);
@@ -295,19 +323,37 @@ public class ExcelGenerator extends AbstractExcelView {
 		cell_33.setCellStyle(myStyle);
 		cell_34.setCellStyle(myStyle);
 		cell_35.setCellStyle(myStyle);
+		cell_36.setCellStyle(myStyle);
+		cell_37.setCellStyle(myStyle);
+		cell_38.setCellStyle(myStyle);
+		cell_39.setCellStyle(myStyle);
+		cell_391.setCellStyle(myStyle);
+		cell_392.setCellStyle(myStyle);
+		cell_393.setCellStyle(myStyle);
+		cell_394.setCellStyle(myStyle);
+		cell_395.setCellStyle(myStyle);
 
 		columnCategory.setCellValue("Category");
 		columnComplement.setCellValue("Complement");
-		columnStepAll.setCellValue("STPALL");
-		cell_32.setCellValue("REFPAT");
-		cell_33.setCellValue("SWICHK");
-		cell_34.setCellValue("SWIMAN");
-		cell_35.setCellValue("TFT - ITTCMD");
+		columnStepAll.setCellValue("REFLOT");
+		cell_32.setCellValue("STPALL");
+		cell_33.setCellValue("ORDOPN");
+		cell_34.setCellValue("REFMAI");
+	
+		cell_35.setCellValue("NUMSTP");
+		cell_36.setCellValue("TYPTFT");
+		cell_37.setCellValue("SWIMAN");
+		cell_38.setCellValue("VERNUM");
+		cell_39.setCellValue("SWIMLT");
+		cell_391.setCellValue("SWICHK");
+		cell_392.setCellValue("BYPASS");
+		cell_393.setCellValue("NOMGRP");
+		cell_394.setCellValue("IDTENT");
+		cell_395.setCellValue("ITTCMD");
 
 		int rowsInTransferOpTab = 1;
-		for (TransferOperation transferOperation : transferOperationList) {
-			rowTransferOperationList = sheet3
-					.createRow((short) rowsInTransferOpTab);
+		for (DeploymentRequestTransferOperation transferOperation : transferOperationList) {
+			rowTransferOperationList = sheet3.createRow((short) rowsInTransferOpTab);
 			columnCategory = rowTransferOperationList.createCell((short) 0);
 			columnComplement = rowTransferOperationList.createCell((short) 1);
 
@@ -316,12 +362,30 @@ public class ExcelGenerator extends AbstractExcelView {
 			cell_33 = rowTransferOperationList.createCell((short) 4);
 			cell_34 = rowTransferOperationList.createCell((short) 5);
 			cell_35 = rowTransferOperationList.createCell((short) 6);
+			cell_36 = rowTransferOperationList.createCell((short) 7);
+			cell_37 = rowTransferOperationList.createCell((short) 8);
+			cell_38 = rowTransferOperationList.createCell((short) 9);
+			cell_39 = rowTransferOperationList.createCell((short) 10);
+			cell_391 = rowTransferOperationList.createCell((short) 11);
+			cell_392 = rowTransferOperationList.createCell((short) 12);
+			cell_393 = rowTransferOperationList.createCell((short) 13);
+			cell_394 = rowTransferOperationList.createCell((short) 14);
+			cell_395 = rowTransferOperationList.createCell((short) 15);
 
-			columnStepAll.setCellValue(transferOperation.getStpAll());
-			cell_32.setCellValue(transferOperation.getPatchRef());
-			cell_33.setCellValue(transferOperation.getSwiChk());
-			cell_34.setCellValue(transferOperation.getSwiMan());
-			cell_35.setCellValue(transferOperation.getIttCmd());
+			columnStepAll.setCellValue(transferOperation.getReflot());
+			cell_32.setCellValue(transferOperation.getStpall());
+			cell_33.setCellValue(transferOperation.getOrdopn());
+			cell_34.setCellValue(transferOperation.getRefmai());
+			cell_35.setCellValue(transferOperation.getNumstp());
+			cell_36.setCellValue(transferOperation.getTyptft());
+			cell_37.setCellValue(transferOperation.getSwiman());
+			cell_38.setCellValue(transferOperation.getVernum());
+			cell_39.setCellValue(transferOperation.getSwimlt());
+			cell_391.setCellValue(transferOperation.getSwichk());
+			cell_392.setCellValue(transferOperation.getBypass());//swibypass
+			cell_393.setCellValue(transferOperation.getNomgrp());
+			cell_394.setCellValue(transferOperation.getIdtent());
+			cell_395.setCellValue(transferOperation.getIttcmd());
 
 			rowsInTransferOpTab++;
 		}
