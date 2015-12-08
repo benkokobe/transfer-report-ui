@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -214,34 +215,50 @@ public class DeploymentRequestDaoImpl implements DeploymentRequestDao {
 		params.addValue("NAMLOT", deploymentRequestName);
 		//String query = "select count(distinct sujpat) from ypd01_syn where refpat in (select refpat from ysw11 where syndpr = (select syndpr from ysw10 where nomdpr=:NAMLOT))";
 		String query = "select count(distinct sujpat) from ysw12 where refpat in (select refpat from ysw11 where syndpr = (select syndpr from ysw10 where nomdpr=:NAMLOT))";
-		int numberOfSubjects= jdbcTemplate.queryForObject(query, params, Integer.class);
-		logger.info("No. of numberOfSubjects:" + numberOfSubjects);
-		return numberOfSubjects;
+		try {
+		  int numberOfSubjects= jdbcTemplate.queryForObject(query, params, Integer.class);
+		  logger.info("No. of numberOfSubjects:" + numberOfSubjects);
+		  return numberOfSubjects;
+		} catch (EmptyResultDataAccessException e) {
+			return -1; // TODO until a good way return an error/warning is devised 
+		}
 	}
 	public String getEnvDst(String deploymentRequestName){
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("NAMLOT", deploymentRequestName);
 		String query = "select envdst from ysw10 where nomdpr=:NAMLOT";
-		String envDst= jdbcTemplate.queryForObject(query, params, String.class);
-		logger.info("DR destination environment:" + envDst);
-		return envDst;
+		try {
+		   String envDst= jdbcTemplate.queryForObject(query, params, String.class);
+		   logger.info("DR destination environment:" + envDst);
+		   return envDst;
+		} catch (EmptyResultDataAccessException e) {
+			return "WARNING: Empty enventory table";
+		}
 	}
 	public String getEnvSrc(String deploymentRequestName){
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("NAMLOT", deploymentRequestName);
 		String query = "select envsrc from ysw10 where nomdpr=:NAMLOT";
-		String envSrc= jdbcTemplate.queryForObject(query, params, String.class);
-		logger.info("DR source environment:" + envSrc);
-		return envSrc;
+		try {
+		   String envSrc= jdbcTemplate.queryForObject(query, params, String.class);
+		   logger.info("DR source environment:" + envSrc);
+		   return envSrc;
+		} catch (EmptyResultDataAccessException e) {
+			return "WARNING: Empty enventory table";
+		}
 	}
 	public String getSynopsis(String deploymentRequestName){
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("NAMLOT", deploymentRequestName);
 		String query = "select ittdpr from ysw10 where nomdpr=:NAMLOT";
-		String ittdpr= jdbcTemplate.queryForObject(query, params, String.class);
+		try{
+		    String ittdpr= jdbcTemplate.queryForObject(query, params, String.class);
 		
-		logger.info("DR synopsis:" + ittdpr);
-		return ittdpr;
+		    logger.info("DR synopsis:" + ittdpr);
+		    return ittdpr;
+		} catch (EmptyResultDataAccessException e) {
+			return "WARNING: Empty enventory table";
+		}	
 	}
 
 }

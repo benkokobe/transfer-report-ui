@@ -286,7 +286,14 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 			log.info("Tab name:" + patchListSheetTab.getSheetName());
 			
 			// TODO find a better way of finding patch description
-			Patch patchDescription = patchCompleteList.get(0);
+			Patch patchDescription = new Patch();
+			if (patchCompleteList.isEmpty()) {
+				patchDescription.setPatchId("NOT FOUND in Inventory table!");	
+				patchDescription.setNomGrp("NOT FOUND in Inventory table!");
+			}else{				
+			   patchDescription = patchCompleteList.get(0);
+			}
+			
 			
 			//columnPatchListDRname = rowPatchList.createCell((short) 0);
 			

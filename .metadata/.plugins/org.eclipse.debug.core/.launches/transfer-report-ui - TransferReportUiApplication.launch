@@ -8,6 +8,9 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.bko.TransferReportUiApplication"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="transfer-report-ui"/>
+<booleanAttribute key="spring.boot.debug.enable" value="false"/>
+<booleanAttribute key="spring.boot.lifecycle.enable" value="true"/>
 <booleanAttribute key="spring.boot.livebean.enable" value="true"/>
 <stringAttribute key="spring.boot.livebean.port" value="47946"/>
+<stringAttribute key="spring.boot.profile" value=""/>
 </launchConfiguration>
