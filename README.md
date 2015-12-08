@@ -1,8 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a small web application which tries to help a B&D user with the generation of the different Excel files used during the execution of a transfer. 
+During the execution of the transfer it's considered best practice to have an excel file with the list of patches being transferred, 
+DB members and the transfer operations that are part of the execution of the transfer.
 
-### What is this repository for? ###
+### DR related excel sheet generator: ###
 
 * Quick summary
 * Version
