@@ -34,7 +34,6 @@ enter your DR and click submit, and the excel file should automatically be gener
 
 The application.properties file in each ENV/<Project> directories will be like the one shown below:
 
-#MoneyYou
 env.name=MoneyYou
 spring.datasource.url=jdbc:oracle:thin:@localhost:8417:DENGPRG
 spring.datasource.username=cw
