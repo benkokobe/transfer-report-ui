@@ -4,7 +4,10 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+=======
+>>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
         <property name="context-root" value="transfer-report-ui"/>
         <property name="java-output-path" value="/transfer-report-ui/target/classes"/>
     </wb-module>

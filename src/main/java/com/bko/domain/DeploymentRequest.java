@@ -2,15 +2,19 @@ package com.bko.domain;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import com.bko.viewresolver.util.SynergyObject;
 
 //import com.bko.SynergyObject;
 
+=======
+>>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 public class DeploymentRequest {
 
 	private String drName;
 	private List<Patch> patchList;
 	private List<DeploymentRequestTransferOperation> deploymentRequestTransferOperation;
+<<<<<<< HEAD
 	
 	private List<PatchMember> memberList;
 	
@@ -22,6 +26,8 @@ public class DeploymentRequest {
 	public void setMemberList(List<PatchMember> memberList) {
 		this.memberList = memberList;
 	}
+=======
+>>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 	public List<DeploymentRequestTransferOperation> getDeploymentRequestTransferOperation() {
 		return deploymentRequestTransferOperation;
 	}
@@ -37,6 +43,7 @@ public class DeploymentRequest {
 	private String envSrc;
 	private String synopsis;
 	
+<<<<<<< HEAD
 
 	private String hostName;
 	private String hostLogin;
@@ -63,6 +70,8 @@ public class DeploymentRequest {
 	}
 	
 	
+=======
+>>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 	public String getEnvDst() {
 		return envDst;
 	}
@@ -126,12 +135,15 @@ public class DeploymentRequest {
 			int numberOfManualTransferOperations) {
 		this.numberOfManualTransferOperations = numberOfManualTransferOperations;
 	}
+<<<<<<< HEAD
 	public List<SynergyObject> getObjectList() {
 		return objectList;
 	}
 	public void setObjectList(List<SynergyObject> objectList) {
 		this.objectList = objectList;
 	}
+=======
+>>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 
 
 }
