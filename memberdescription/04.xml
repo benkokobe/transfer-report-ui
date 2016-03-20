@@ -1,0 +1,11 @@
+<member type="04" dictionnary="false">
+  <table name="CWD16" instance="CWD16" mandatory="false" multiple="true">
+    <key name="NOMSCR" mapping="[:nommbr]" id="CWD16:NOMSCR" nullable="false"></key>
+    <key name="CHPSCR" id="CWD16:CHPSCR" nullable="false"></key>
+    <column default=" " CIC="01" name="NOMSCR" id="CWD16:NOMSCR" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="CHPSCR" id="CWD16:CHPSCR" nullable="false" size="20"></column>
+    <column default=" " CIC="01" name="IDTENT" id="CWD16:IDTENT" nullable="false" size="15"></column>
+    <column default="0" CIC="01" name="CHPDIC" id="CWD16:CHPDIC" type="Integer" nullable="false"></column>
+  </table>
+</member>
+

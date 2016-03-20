@@ -1,0 +1,69 @@
+<member type="JO">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="CWDDA" instance="CWDDA" mandatory="false" multiple="true">
+    <key name="WTRANS" mapping="[:nommbr]" id="CWDDA:WTRANS" nullable="false"></key>
+    <key name="NOMBEA" id="CWDDA:NOMBEA" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="CWDDA:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="CWDDA:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="CWDDA:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="CWDDA:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="CWDDA:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="CWDDA:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="CWDDA:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="CWDDA:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="WTRANS" id="CWDDA:WTRANS" nullable="false" size="12"></column>
+    <column default=" " CIC="01" name="NOMBEA" id="CWDDA:NOMBEA" nullable="false" size="64"></column>
+  </table>
+  <table name="CWDDB" instance="CWDDB" mandatory="false" multiple="false">
+    <key name="WTRANS" mapping="[:nommbr]" id="CWDDB:WTRANS" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="CWDDB:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="CWDDB:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="CWDDB:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="CWDDB:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="CWDDB:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="CWDDB:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="CWDDB:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="CWDDB:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="WTRANS" id="CWDDB:WTRANS" nullable="false" size="12"></column>
+    <column default=" " CIC="01" name="CODJRL" id="CWDDB:CODJRL" nullable="false" size="02"></column>
+    <column CIC="01" name="TYPOPE" id="CWDDB:TYPOPE" nullable="true" size="02"></column>
+    <column CIC="01" name="CODCHL" id="CWDDB:CODCHL" nullable="true" size="03"></column>
+    <column default=" " CIC="01" name="IDTSVC" id="CWDDB:IDTSVC" nullable="false" size="35"></column>
+    <column default=" " CIC="01" name="IDTOPE" id="CWDDB:IDTOPE" nullable="false" size="64"></column>
+    <column CIC="01" name="PTHWEB" id="CWDDB:PTHWEB" nullable="true" size="64"></column>
+    <column default=" " CIC="01" name="NOMPAG_INI" id="CWDDB:NOMPAG_INI" nullable="false" size="64"></column>
+    <column CIC="01" name="PARAMS" id="CWDDB:PARAMS" nullable="true" size="256"></column>
+    <column default="0" CIC="01" name="PTHLEN" id="CWDDB:PTHLEN" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="REFLIB" id="CWDDB:REFLIB" nullable="false" size="50"></column>
+    <column default=" " CIC="01" name="HLPCTX" id="CWDDB:HLPCTX" nullable="false" size="64"></column>
+    <column default=" " CIC="01" name="HLPURL" id="CWDDB:HLPURL" nullable="false" size="128"></column>
+  </table>
+</member>
+

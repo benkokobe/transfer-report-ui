@@ -1,0 +1,358 @@
+<member type="JM">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="HDD50" instance="HDD50" mandatory="false" multiple="false">
+    <key name="NAME" mapping="[:nommbr]::(.*)/.*" id="HDD50:NAME" nullable="false"></key>
+    <key name="OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD50:OBJTYPE" nullable="false"></key>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD50:HEUMAJ" nullable="false" size="08"></column>
+    <column CIC="03" name="HANDLER_CLASS" id="HDD50:HANDLER_CLASS" nullable="true" update="false" size="256"></column>
+    <column CIC="01" name="SVC_NAME" id="HDD50:SVC_NAME" nullable="true" size="128"></column>
+    <column CIC="01" name="SWI_CHAINING" id="HDD50:SWI_CHAINING" nullable="true" size="01"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD50:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD50:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD50:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD50:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD50:REFMAJ" nullable="false" size="16"></column>
+    <column CIC="01" name="OP_NAME" id="HDD50:OP_NAME" nullable="true" size="128"></column>
+    <column default=" " CIC="01" name="OBJTYPE" id="HDD50:OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="NAME" id="HDD50:NAME" nullable="false" size="255"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD50:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD50:USRMAJ" nullable="false" size="03"></column>
+    <column CIC="01" name="NBRLIG" id="HDD50:NBRLIG" type="Integer" nullable="true"></column>
+    <column CIC="01" name="MAXRSL" id="HDD50:MAXRSL" type="Integer" nullable="true"></column>
+  </table>
+  <table name="HDD51" instance="HDD51" mandatory="false" multiple="true">
+    <key name="SISPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD51:SISPEC_NAME" nullable="false"></key>
+    <key name="SISPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD51:SISPEC_OBJTYPE" nullable="false"></key>
+    <key name="SITEM_ALIAS" id="HDD51:SITEM_ALIAS" nullable="false"></key>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD51:HEUMAJ" nullable="false" size="08"></column>
+    <column CIC="01" name="PROMPTCODE" id="HDD51:PROMPTCODE" nullable="true" size="128"></column>
+    <column default=" " CIC="01" name="SISPEC_NAME" id="HDD51:SISPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD51:DATCRT" nullable="false" size="08"></column>
+    <column CIC="01" name="HANDLER_CLASS" id="HDD51:HANDLER_CLASS" nullable="true" size="256"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD51:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD51:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD51:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD51:REFMAJ" nullable="false" size="16"></column>
+    <column CIC="01" name="ISCALCULATED" id="HDD51:ISCALCULATED" nullable="true" size="01"></column>
+    <column CIC="01" name="HIDDEN" id="HDD51:HIDDEN" nullable="true" size="01"></column>
+    <column default=" " CIC="01" name="SISPEC_OBJTYPE" id="HDD51:SISPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="SITEM_ALIAS" id="HDD51:SITEM_ALIAS" nullable="false" size="255"></column>
+    <column CIC="01" name="PATH" id="HDD51:PATH" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPECODE" id="HDD51:TYPECODE" nullable="true" size="128"></column>
+    <column CIC="01" name="MULTILINGUAL" id="HDD51:MULTILINGUAL" nullable="true" size="01"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD51:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD51:USRMAJ" nullable="false" size="03"></column>
+    <column default="0" CIC="01" name="NUMORD" id="HDD51:NUMORD" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="IDTFLD" id="HDD51:IDTFLD" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="SWISRT" id="HDD51:SWISRT" nullable="false" size="01"></column>
+    <column CIC="01" name="SELOCC" id="HDD51:SELOCC" type="Integer" nullable="true"></column>
+    <column default=" " CIC="01" name="LFTJNT" id="HDD51:LFTJNT" nullable="false" size="01"></column>
+    <table name="HDD64" instance="HDD64" mandatory="false" multiple="true">
+      <key name="IDTFLD" mapping="[HDD51:IDTFLD]" id="HDD64:IDTFLD" type="Integer" nullable="false"></key>
+      <key name="NOMATT" id="HDD64:NOMATT" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD64:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD64:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD64:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD64:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD64:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD64:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD64:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD64:STAANN" nullable="false" size="01"></column>
+      <column default="0" CIC="01" name="IDTFLD" id="HDD64:IDTFLD" type="Integer" nullable="false"></column>
+      <column default=" " CIC="01" name="NOMATT" id="HDD64:NOMATT" nullable="false" size="50"></column>
+      <column default=" " CIC="01" name="TYPVAL" id="HDD64:TYPVAL" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="VALATT" id="HDD64:VALATT" nullable="false" size="64"></column>
+    </table>
+  </table>
+  <table name="HDD52" instance="HDD52" mandatory="false" multiple="true">
+    <key name="AGGREGATE" id="HDD52:AGGREGATE" nullable="false"></key>
+    <key name="AISPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD52:AISPEC_NAME" nullable="false"></key>
+    <key name="AISPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD52:AISPEC_OBJTYPE" nullable="false"></key>
+    <key name="SITEM_ALIAS" id="HDD52:SITEM_ALIAS" nullable="false"></key>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD52:HEUMAJ" nullable="false" size="08"></column>
+    <column CIC="01" name="PROMPTCODE" id="HDD52:PROMPTCODE" nullable="true" size="128"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD52:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD52:DATMAJ" nullable="false" size="08"></column>
+    <column CIC="01" name="AGITEM_ALIAS" id="HDD52:AGITEM_ALIAS" nullable="true" size="128"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD52:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="AISPEC_NAME" id="HDD52:AISPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD52:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="AGGREGATE" id="HDD52:AGGREGATE" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD52:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SITEM_ALIAS" id="HDD52:SITEM_ALIAS" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="AISPEC_OBJTYPE" id="HDD52:AISPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column CIC="01" name="TYPECODE" id="HDD52:TYPECODE" nullable="true" size="128"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD52:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD52:USRMAJ" nullable="false" size="03"></column>
+  </table>
+  <table name="HDD53" instance="HDD53" mandatory="false" multiple="true" sort="RHTID">
+    <key name="ROSPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD53:ROSPEC_NAME" nullable="false"></key>
+    <key name="ROSPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD53:ROSPEC_OBJTYPE" nullable="false"></key>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD53:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="ROSPEC_NAME" id="HDD53:ROSPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD53:DATCRT" nullable="false" size="08"></column>
+    <column CIC="01" name="CONDITION_CCID" id="HDD53:CONDITION_CCID" type="Integer" nullable="true"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD53:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD53:PGMMAJ" nullable="false" size="06"></column>
+    <column CIC="01" name="COLOR" id="HDD53:COLOR" nullable="true" size="128"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD53:STAANN" nullable="false" size="01"></column>
+    <column default="0" CIC="01" name="RHTID" id="HDD53:RHTID" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD53:REFMAJ" nullable="false" size="16"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD53:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD53:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="ROSPEC_OBJTYPE" id="HDD53:ROSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <table name="HDD61" instance="HDD61" recursive="n2.ccid=n1.outercrit_ccid" mandatory="false" multiple="false">
+      <key name="CCID" mapping="[HDD53:CONDITION_CCID]" id="HDD61:CCID" type="Integer" nullable="false"></key>
+      <column default="0" CIC="01" name="OUTERCRIT_CCID" id="HDD61:OUTERCRIT_CCID" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD61:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD61:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD61:REFMAJ" nullable="false" size="16"></column>
+      <column CIC="01" name="CONNECTOR" id="HDD61:CONNECTOR" nullable="true" size="128"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD61:DATCRT" nullable="false" size="08"></column>
+      <column default="0" CIC="01" name="CCID" id="HDD61:CCID" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD61:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD61:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD61:USRMAJ" nullable="false" size="03"></column>
+      <column default="0" CIC="22" name="NUMVER" id="HDD61:NUMVER" type="Integer" nullable="false"></column>
+      <table name="HDD62" instance="HDD62" mandatory="false" multiple="true" sort="SCID">
+        <key name="COMPCR_CCID" mapping="[HDD61:CCID]" id="HDD62:COMPCR_CCID" type="Integer" nullable="false"></key>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD62:HEUMAJ" nullable="false" size="08"></column>
+        <column CIC="01" name="FIELDVALUE" id="HDD62:FIELDVALUE" nullable="true" size="128"></column>
+        <column default="0" CIC="01" name="SCID" id="HDD62:SCID" type="Integer" nullable="false"></column>
+        <column CIC="01" name="COMPCR_CCID" id="HDD62:COMPCR_CCID" type="Integer" nullable="true"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD62:DATCRT" nullable="false" size="08"></column>
+        <column CIC="01" name="OPERATOR" id="HDD62:OPERATOR" nullable="true" size="128"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD62:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD62:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD62:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD62:REFMAJ" nullable="false" size="16"></column>
+        <column CIC="01" name="FIELDPATH" id="HDD62:FIELDPATH" nullable="true" size="128"></column>
+        <column default="0" CIC="22" name="NUMVER" id="HDD62:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD62:USRMAJ" nullable="false" size="03"></column>
+      </table>
+    </table>
+  </table>
+  <table name="HDD54" instance="HDD54" mandatory="false" multiple="true">
+    <key name="SGID" id="HDD54:SGID" type="Integer" nullable="false"></key>
+    <key name="SGSPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD54:SGSPEC_NAME" nullable="false"></key>
+    <key name="SGSPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD54:SGSPEC_OBJTYPE" nullable="false"></key>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD54:HEUMAJ" nullable="false" size="08"></column>
+    <column CIC="01" name="PROMPTCODE" id="HDD54:PROMPTCODE" nullable="true" size="128"></column>
+    <column CIC="01" name="COMPCSPEC_CSID" id="HDD54:COMPCSPEC_CSID" type="Integer" nullable="true"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD54:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD54:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD54:PGMMAJ" nullable="false" size="06"></column>
+    <column CIC="01" name="SIMSPEC_CRITID" id="HDD54:SIMSPEC_CRITID" type="Integer" nullable="true"></column>
+    <column default="0" CIC="01" name="SGID" id="HDD54:SGID" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="SGSPEC_OBJTYPE" id="HDD54:SGSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD54:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD54:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SGSPEC_NAME" id="HDD54:SGSPEC_NAME" nullable="false" size="255"></column>
+    <column CIC="01" name="NAME" id="HDD54:NAME" nullable="true" size="128"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD54:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD54:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="TESORD" id="HDD54:TESORD" nullable="false" size="01"></column>
+    <table name="HDD55" instance="HDD55_1" mandatory="false" multiple="false">
+      <key name="CRITID" mapping="[HDD54:SIMSPEC_CRITID]" id="HDD55:CRITID" type="Integer" nullable="false"></key>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD55:HEUMAJ" nullable="false" size="08"></column>
+      <column CIC="01" name="COMPCRIT_CSID" id="HDD55:COMPCRIT_CSID" type="Integer" nullable="true"></column>
+      <column CIC="01" name="PROMPTCODE" id="HDD55:PROMPTCODE" nullable="true" size="128"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD55:DATCRT" nullable="false" size="08"></column>
+      <column CIC="01" name="OPERATOR" id="HDD55:OPERATOR" nullable="true" size="128"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD55:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD55:PGMMAJ" nullable="false" size="06"></column>
+      <column default="0" CIC="01" name="CRITID" id="HDD55:CRITID" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD55:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD55:REFMAJ" nullable="false" size="16"></column>
+      <column CIC="01" name="HELP_SERVICE" id="HDD55:HELP_SERVICE" nullable="true" size="128"></column>
+      <column CIC="01" name="FIELDPATH" id="HDD55:FIELDPATH" nullable="true" size="128"></column>
+      <column CIC="01" name="MANDATORY" id="HDD55:MANDATORY" nullable="true" size="1"></column>
+      <column CIC="01" name="TYPECODE" id="HDD55:TYPECODE" nullable="true" size="128"></column>
+      <column CIC="01" name="HELP_OPERATION" id="HDD55:HELP_OPERATION" nullable="true" size="128"></column>
+      <column default="0" CIC="22" name="NUMVER" id="HDD55:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD55:USRMAJ" nullable="false" size="03"></column>
+      <column CIC="01" name="NUMORD" id="HDD55:NUMORD" type="Integer" nullable="true"></column>
+      <column default=" " CIC="01" name="FLDALS" id="HDD55:FLDALS" nullable="false" size="64"></column>
+      <table name="HDD64" instance="HDD64" mandatory="false" multiple="true">
+        <key name="IDTFLD" mapping="[HDD55:CRITID]" id="HDD64:IDTFLD" type="Integer" nullable="false"></key>
+        <key name="NOMATT" id="HDD64:NOMATT" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="HDD64:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD64:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD64:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD64:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD64:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD64:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD64:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD64:STAANN" nullable="false" size="01"></column>
+        <column default="0" CIC="01" name="IDTFLD" id="HDD64:IDTFLD" type="Integer" nullable="false"></column>
+        <column default=" " CIC="01" name="NOMATT" id="HDD64:NOMATT" nullable="false" size="50"></column>
+        <column default=" " CIC="01" name="TYPVAL" id="HDD64:TYPVAL" nullable="false" size="01"></column>
+        <column default=" " CIC="01" name="VALATT" id="HDD64:VALATT" nullable="false" size="64"></column>
+      </table>
+    </table>
+    <table name="HDD56" instance="HDD56" recursive="n2.csid=n1.compspec_csid" mandatory="false" multiple="false">
+      <key name="CSID" mapping="[HDD54:COMPCSPEC_CSID]" id="HDD56:CSID" type="Integer" nullable="false"></key>
+      <column CIC="01" name="COMPSPEC_CSID" id="HDD56:COMPSPEC_CSID" type="Integer" nullable="true"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD56:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD56:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD56:REFMAJ" nullable="false" size="16"></column>
+      <column CIC="01" name="CONNECTOR" id="HDD56:CONNECTOR" nullable="true" size="128"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD56:DATCRT" nullable="false" size="08"></column>
+      <column CIC="01" name="CSID" id="HDD56:CSID" type="Integer" nullable="true"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD56:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD56:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD56:USRMAJ" nullable="false" size="03"></column>
+      <column default="0" CIC="22" name="NUMVER" id="HDD56:NUMVER" type="Integer" nullable="false"></column>
+      <column CIC="01" name="NUMORD" id="HDD56:NUMORD" type="Integer" nullable="true"></column>
+      <table name="HDD55" instance="HDD55_2" mandatory="false" multiple="true">
+        <key name="CRITID" id="HDD55:CRITID" type="Integer" nullable="false"></key>
+        <key name="COMPCRIT_CSID" mapping="[HDD56:CSID]" id="HDD55:COMPCRIT_CSID" type="Integer" nullable="false"></key>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD55:HEUMAJ" nullable="false" size="08"></column>
+        <column CIC="01" name="COMPCRIT_CSID" id="HDD55:COMPCRIT_CSID" type="Integer" nullable="true"></column>
+        <column CIC="01" name="PROMPTCODE" id="HDD55:PROMPTCODE" nullable="true" size="128"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD55:DATCRT" nullable="false" size="08"></column>
+        <column CIC="01" name="OPERATOR" id="HDD55:OPERATOR" nullable="true" size="128"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD55:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD55:PGMMAJ" nullable="false" size="06"></column>
+        <column default="0" CIC="01" name="CRITID" id="HDD55:CRITID" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD55:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD55:REFMAJ" nullable="false" size="16"></column>
+        <column CIC="01" name="HELP_SERVICE" id="HDD55:HELP_SERVICE" nullable="true" size="128"></column>
+        <column CIC="01" name="FIELDPATH" id="HDD55:FIELDPATH" nullable="true" size="128"></column>
+        <column CIC="01" name="MANDATORY" id="HDD55:MANDATORY" nullable="true" size="1"></column>
+        <column CIC="01" name="TYPECODE" id="HDD55:TYPECODE" nullable="true" size="128"></column>
+        <column CIC="01" name="HELP_OPERATION" id="HDD55:HELP_OPERATION" nullable="true" size="128"></column>
+        <column default="0" CIC="22" name="NUMVER" id="HDD55:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD55:USRMAJ" nullable="false" size="03"></column>
+        <column CIC="01" name="NUMORD" id="HDD55:NUMORD" type="Integer" nullable="true"></column>
+        <column default=" " CIC="01" name="FLDALS" id="HDD55:FLDALS" nullable="false" size="64"></column>
+        <table name="HDD64" instance="HDD64" mandatory="false" multiple="true">
+          <key name="IDTFLD" mapping="[HDD55:CRITID]" id="HDD64:IDTFLD" type="Integer" nullable="false"></key>
+          <key name="NOMATT" id="HDD64:NOMATT" nullable="false"></key>
+          <column default="0" CIC="22" name="NUMVER" id="HDD64:NUMVER" type="Integer" nullable="false"></column>
+          <column default=" " CIC="22" name="REFMAJ" id="HDD64:REFMAJ" nullable="false" size="16"></column>
+          <column default=" " CIC="22" name="DATCRT" id="HDD64:DATCRT" nullable="false" size="08"></column>
+          <column default=" " CIC="22" name="DATMAJ" id="HDD64:DATMAJ" nullable="false" size="08"></column>
+          <column default=" " CIC="22" name="HEUMAJ" id="HDD64:HEUMAJ" nullable="false" size="08"></column>
+          <column default=" " CIC="22" name="USRMAJ" id="HDD64:USRMAJ" nullable="false" size="03"></column>
+          <column default=" " CIC="22" name="PGMMAJ" id="HDD64:PGMMAJ" nullable="false" size="06"></column>
+          <column default=" " CIC="22" name="STAANN" id="HDD64:STAANN" nullable="false" size="01"></column>
+          <column default="0" CIC="01" name="IDTFLD" id="HDD64:IDTFLD" type="Integer" nullable="false"></column>
+          <column default=" " CIC="01" name="NOMATT" id="HDD64:NOMATT" nullable="false" size="50"></column>
+          <column default=" " CIC="01" name="TYPVAL" id="HDD64:TYPVAL" nullable="false" size="01"></column>
+          <column default=" " CIC="01" name="VALATT" id="HDD64:VALATT" nullable="false" size="64"></column>
+        </table>
+      </table>
+    </table>
+  </table>
+  <table name="HDD57" instance="HDD57" mandatory="false" multiple="true">
+    <key name="CCSPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD57:CCSPEC_NAME" nullable="false"></key>
+    <key name="CCSPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD57:CCSPEC_OBJTYPE" nullable="false"></key>
+    <key name="OWNERNAME" id="HDD57:OWNERNAME" nullable="false"></key>
+    <column default=" " CIC="01" name="CCSPEC_NAME" id="HDD57:CCSPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD57:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD57:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD57:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="OWNERNAME" id="HDD57:OWNERNAME" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD57:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="CCSPEC_OBJTYPE" id="HDD57:CCSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD57:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD57:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD57:USRMAJ" nullable="false" size="03"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD57:NUMVER" type="Integer" nullable="false"></column>
+  </table>
+  <table name="HDD58" instance="HDD58" mandatory="false" multiple="true" sort="HIDDENCRITID">
+    <key name="HCSPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD58:HCSPEC_NAME" nullable="false"></key>
+    <key name="HCSPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD58:HCSPEC_OBJTYPE" nullable="false"></key>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD58:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="VALUE" id="HDD58:VALUE" nullable="false" size="128"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD58:DATCRT" nullable="false" size="08"></column>
+    <column CIC="01" name="OPERATOR" id="HDD58:OPERATOR" nullable="true" size="128"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD58:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD58:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD58:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="HCSPEC_OBJTYPE" id="HDD58:HCSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD58:REFMAJ" nullable="false" size="16"></column>
+    <column default="0" CIC="01" name="HIDDENCRITID" id="HDD58:HIDDENCRITID" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="HCSPEC_NAME" id="HDD58:HCSPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="PATH" id="HDD58:PATH" nullable="false" size="128"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD58:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD58:USRMAJ" nullable="false" size="03"></column>
+  </table>
+  <table name="HDD59" instance="HDD59" mandatory="false" multiple="true">
+    <key name="OCID" id="HDD59:OCID" type="Integer" nullable="false"></key>
+    <key name="OBSPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD59:OBSPEC_NAME" nullable="false"></key>
+    <key name="OBSPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD59:OBSPEC_OBJTYPE" nullable="false"></key>
+    <column default="0" CIC="01" name="SORTINDEX" id="HDD59:SORTINDEX" type="Integer" nullable="false"></column>
+    <column CIC="01" name="SITEM_ALIAS" id="HDD59:SITEM_ALIAS" nullable="true" size="128"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD59:HEUMAJ" nullable="false" size="08"></column>
+    <column default="0" CIC="01" name="OCID" id="HDD59:OCID" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD59:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD59:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD59:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="OBSPEC_OBJTYPE" id="HDD59:OBSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column CIC="01" name="ACS_FLAG" id="HDD59:ACS_FLAG" nullable="true" size="1"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD59:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD59:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="OBSPEC_NAME" id="HDD59:OBSPEC_NAME" nullable="false" size="255"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD59:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD59:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="HDD59:NOMGRP" nullable="false" size="128"></column>
+  </table>
+  <table name="HDD60" instance="HDD60" mandatory="false" multiple="true" sort="GCID">
+    <key name="GBSPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD60:GBSPEC_NAME" nullable="false"></key>
+    <key name="GBSPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD60:GBSPEC_OBJTYPE" nullable="false"></key>
+    <column default="0" CIC="01" name="SORTINDEX" id="HDD60:SORTINDEX" type="Integer" nullable="false"></column>
+    <column CIC="01" name="SITEM_ALIAS" id="HDD60:SITEM_ALIAS" nullable="true" size="128"></column>
+    <column default="0" CIC="01" name="GCID" id="HDD60:GCID" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD60:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD60:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD60:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD60:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD60:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD60:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="GBSPEC_OBJTYPE" id="HDD60:GBSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="GBSPEC_NAME" id="HDD60:GBSPEC_NAME" nullable="false" size="255"></column>
+    <column default="0" CIC="22" name="NUMVER" id="HDD60:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD60:USRMAJ" nullable="false" size="03"></column>
+  </table>
+  <table name="HDD63" instance="HDD63" mandatory="false" multiple="true" sort="OWNERNAME,CCSPEC_NAME,CCSPEC_OBJTYPE,SORTINDEX">
+    <key name="SISPEC_NAME" mapping="[:nommbr]::(.*)/.*" id="HDD63:SISPEC_NAME" nullable="false"></key>
+    <key name="SISPEC_OBJTYPE" mapping="[:nommbr]::.*/(.*)" id="HDD63:SISPEC_OBJTYPE" nullable="false"></key>
+    <column default=" " CIC="01" name="OWNERNAME" id="HDD63:OWNERNAME" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="CCSPEC_NAME" id="HDD63:CCSPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="CCSPEC_OBJTYPE" id="HDD63:CCSPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default="0" CIC="01" name="SORTINDEX" id="HDD63:SORTINDEX" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="SISPEC_NAME" id="HDD63:SISPEC_NAME" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="SISPEC_OBJTYPE" id="HDD63:SISPEC_OBJTYPE" nullable="false" size="255"></column>
+    <column default=" " CIC="01" name="SITEM_ALIAS" id="HDD63:SITEM_ALIAS" nullable="false" size="255"></column>
+  </table>
+</member>
+

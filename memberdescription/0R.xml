@@ -1,0 +1,459 @@
+<member type="0R" order="H">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="HDD01" instance="HDD01" mandatory="false" multiple="false">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD01:IDTENT" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IDTENT" id="HDD01:IDTENT" nullable="false" size="10"></column>
+    <column default=" " CIC="01" name="CODENT" id="HDD01:CODENT" nullable="false" size="02"></column>
+    <column default=" " CIC="04" name="SWIMOD" id="HDD01:SWIMOD" nullable="false" update="false" size="01"></column>
+    <column CIC="04" name="SWIMMD" id="HDD01:SWIMMD" nullable="true" update="false" size="01"></column>
+    <column CIC="01" name="ENTJAV" id="HDD01:ENTJAV" nullable="true" size="64"></column>
+    <column default="0" CIC="21" name="NUMVRS" id="HDD01:NUMVRS" type="Integer" nullable="false"></column>
+    <column default=" " CIC="04" name="FICDOC" id="HDD01:FICDOC" nullable="false" update="false" size="08"></column>
+    <column default="0" CIC="21" name="NBRIDX" id="HDD01:NBRIDX" type="Integer" nullable="false"></column>
+    <column default="0" CIC="21" name="NBREXN" id="HDD01:NBREXN" type="Integer" nullable="false"></column>
+    <column default="0" CIC="21" name="LONREC" id="HDD01:LONREC" type="Integer" nullable="false"></column>
+    <column default="0" CIC="21" name="ORDMAX" id="HDD01:ORDMAX" type="Integer" nullable="false"></column>
+    <column CIC="01" name="SWICAH" id="HDD01:SWICAH" nullable="true" size="01"></column>
+    <column CIC="01" name="PTHPAC" id="HDD01:PTHPAC" nullable="true" size="128"></column>
+    <column CIC="01" name="TECENT" id="HDD01:TECENT" nullable="true" size="05"></column>
+    <column CIC="01" name="PARENT" id="HDD01:PARENT" nullable="true" size="05"></column>
+    <column default=" " CIC="01" name="PNTDEF" id="HDD01:PNTDEF" nullable="false" size="05"></column>
+    <column CIC="01" name="PHYIMP" id="HDD01:PHYIMP" nullable="true" size="01"></column>
+    <column CIC="02" name="SWILOG" id="HDD01:SWILOG" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWIDBG" id="HDD01:SWIDBG" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWIJOU" id="HDD01:SWIJOU" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWIROL" id="HDD01:SWIROL" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWIMAJ" id="HDD01:SWIMAJ" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI001" id="HDD01:SWI001" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWITRU" id="HDD01:SWITRU" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI003" id="HDD01:SWI003" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI009" id="HDD01:SWI009" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI010" id="HDD01:SWI010" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI011" id="HDD01:SWI011" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI012" id="HDD01:SWI012" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI013" id="HDD01:SWI013" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI014" id="HDD01:SWI014" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI015" id="HDD01:SWI015" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI016" id="HDD01:SWI016" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI017" id="HDD01:SWI017" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI018" id="HDD01:SWI018" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI019" id="HDD01:SWI019" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI020" id="HDD01:SWI020" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI021" id="HDD01:SWI021" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI022" id="HDD01:SWI022" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI023" id="HDD01:SWI023" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI024" id="HDD01:SWI024" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI025" id="HDD01:SWI025" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI026" id="HDD01:SWI026" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI027" id="HDD01:SWI027" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI028" id="HDD01:SWI028" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI029" id="HDD01:SWI029" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI030" id="HDD01:SWI030" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI031" id="HDD01:SWI031" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWI032" id="HDD01:SWI032" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="DBGLVL" id="HDD01:DBGLVL" nullable="true" update="false" size="03"></column>
+    <column CIC="02" name="TBSNAM" id="HDD01:TBSNAM" nullable="true" update="false" size="30"></column>
+    <column CIC="02" name="INIEXT" id="HDD01:INIEXT" type="Integer" nullable="true" update="false"></column>
+    <column CIC="02" name="SOCTYP" id="HDD01:SOCTYP" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="SWIFLD" id="HDD01:SWIFLD" nullable="true" update="false" size="01"></column>
+    <column CIC="02" name="TYPTDC" id="HDD01:TYPTDC" nullable="true" update="false" size="01"></column>
+    <column CIC="01" name="MBRCIC" id="HDD01:MBRCIC" nullable="true" size="02"></column>
+    <column CIC="02" name="MBRCCS" id="HDD01:MBRCCS" nullable="true" update="false" size="02"></column>
+  </table>
+  <table name="HDD02" instance="HDD02" mandatory="false" multiple="true">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD02:IDTENT" nullable="false"></key>
+    <key name="CODLAN" id="HDD02:CODLAN" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD02:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD02:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD02:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD02:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD02:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD02:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD02:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD02:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IDTENT" id="HDD02:IDTENT" nullable="false" size="10"></column>
+    <column default=" " CIC="01" name="CODLAN" id="HDD02:CODLAN" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="REFMDC" id="HDD02:REFMDC" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="REFMTC" id="HDD02:REFMTC" nullable="false" size="16"></column>
+    <column default=" " CIC="42" name="LIBENT" id="HDD02:LIBENT" nullable="false" size="50"></column>
+    <table name="HDD02m" instance="REFMDC" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[HDD02:REFMDC]" id="HDD02m:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD02m:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD02m:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD02m:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD02m:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD02m:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD02m:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD02m:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD02m:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="HDD02m:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="HDD02m:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="HDD02m:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="HDD02m" instance="REFMTC" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[HDD02:REFMTC]" id="HDD02m:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD02m:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD02m:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD02m:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD02m:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD02m:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD02m:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD02m:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD02m:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="HDD02m:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="HDD02m:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="HDD02m:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+  <table name="HDD03" instance="HDD03" recursive="n2.idtent = n1.idtent and n2.numpcd = n1.numord" mandatory="false" multiple="true" sort="">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD03:IDTENT" nullable="false"></key>
+    <key name="NUMPCD" mapping="0" id="HDD03:NUMPCD" type="Integer" nullable="false" bypassDelete="true"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD03:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD03:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD03:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD03:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD03:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD03:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD03:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD03:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IDTENT" id="HDD03:IDTENT" nullable="false" size="10"></column>
+    <column CIC="01" name="ENTJAV" id="HDD03:ENTJAV" nullable="true" size="64"></column>
+    <column default="0" CIC="21" name="NUMORD" id="HDD03:NUMORD" type="Integer" nullable="false"></column>
+    <column default="0" CIC="21" name="NUMPCD" id="HDD03:NUMPCD" type="Integer" nullable="false"></column>
+    <column default="0" CIC="21" name="NUMSUI" id="HDD03:NUMSUI" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="NOMTBL" id="HDD03:NOMTBL" nullable="false" size="10"></column>
+    <column default=" " CIC="01" name="CHPTBL" id="HDD03:CHPTBL" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="LIGGRP" id="HDD03:LIGGRP" nullable="false" size="80"></column>
+    <column default=" " CIC="01" name="NOMCOB" id="HDD03:NOMCOB" nullable="false" size="25"></column>
+    <column CIC="01" name="NOMJAV" id="HDD03:NOMJAV" nullable="true" size="64"></column>
+    <column default="0" CIC="01" name="NIVCOB" id="HDD03:NIVCOB" type="Integer" nullable="false"></column>
+    <column CIC="01" name="FRMCOB" id="HDD03:FRMCOB" nullable="true" size="20"></column>
+    <column default=" " CIC="01" name="TYPCOB" id="HDD03:TYPCOB" nullable="false" size="02"></column>
+    <column CIC="01" name="TYPJAV" id="HDD03:TYPJAV" nullable="true" size="02"></column>
+    <column default=" " CIC="01" name="SWIEXT" id="HDD03:SWIEXT" nullable="false" size="01"></column>
+    <column default="0" CIC="01" name="OCCCOB" id="HDD03:OCCCOB" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="CODBIN" id="HDD03:CODBIN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWINUL" id="HDD03:SWINUL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBG" id="HDD03:SWIOBG" nullable="false" size="01"></column>
+    <column CIC="02" name="REFEXN" id="HDD03:REFEXN" nullable="true" update="false" size="16"></column>
+    <column default=" " CIC="04" name="SWIMOD" id="HDD03:SWIMOD" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICRY" id="HDD03:SWICRY" nullable="false" update="false" size="01"></column>
+    <column CIC="01" name="COLCIC" id="HDD03:COLCIC" nullable="true" size="02"></column>
+    <table name="HDD04" instance="HDD04" mandatory="false" multiple="true">
+      <key name="IDTENT" mapping="[:nommbr]" id="HDD04:IDTENT" nullable="false"></key>
+      <key name="NUMORD" mapping="[HDD03:NUMORD]" id="HDD04:NUMORD" type="Integer" nullable="false"></key>
+      <key name="CODLAN" id="HDD04:CODLAN" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD04:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD04:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD04:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD04:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD04:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD04:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD04:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD04:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="IDTENT" id="HDD04:IDTENT" nullable="false" size="10"></column>
+      <column default="0" CIC="01" name="NUMORD" id="HDD04:NUMORD" type="Integer" nullable="false"></column>
+      <column default=" " CIC="01" name="CODLAN" id="HDD04:CODLAN" nullable="false" size="02"></column>
+      <column default=" " CIC="01" name="REFMDC" id="HDD04:REFMDC" nullable="false" size="16"></column>
+      <column default=" " CIC="01" name="REFMTC" id="HDD04:REFMTC" nullable="false" size="16"></column>
+      <column default=" " CIC="01" name="LIBDON" id="HDD04:LIBDON" nullable="false" size="50"></column>
+      <table name="HDD04M" instance="REFMDC" mandatory="false" multiple="false">
+        <key name="REFTEX" mapping="[HDD04:REFMDC]" id="HDD04M:REFTEX" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="HDD04M:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD04M:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD04M:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD04M:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD04M:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD04M:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD04M:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD04M:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="43" name="REFTEX" id="HDD04M:REFTEX" nullable="false" size="16"></column>
+        <column default="0" CIC="43" name="CPTMEM" id="HDD04M:CPTMEM" type="Integer" nullable="false"></column>
+        <column default=" " CIC="43" name="TEXMEM" id="HDD04M:TEXMEM" nullable="false" size="3000"></column>
+      </table>
+      <table name="HDD04M" instance="REFMTC" mandatory="false" multiple="false">
+        <key name="REFTEX" mapping="[HDD04:REFMTC]" id="HDD04M:REFTEX" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="HDD04M:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD04M:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD04M:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD04M:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD04M:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD04M:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD04M:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD04M:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="43" name="REFTEX" id="HDD04M:REFTEX" nullable="false" size="16"></column>
+        <column default="0" CIC="43" name="CPTMEM" id="HDD04M:CPTMEM" type="Integer" nullable="false"></column>
+        <column default=" " CIC="43" name="TEXMEM" id="HDD04M:TEXMEM" nullable="false" size="3000"></column>
+      </table>
+    </table>
+    <table name="HDD06" instance="HDD06" mandatory="false" multiple="true">
+      <key name="IDTENT" mapping="[:nommbr]" id="HDD06:IDTENT" nullable="false"></key>
+      <key name="NUMAPE" id="HDD06:NUMAPE" nullable="false"></key>
+      <key name="NUMORD" mapping="[HDD03:NUMORD]" id="HDD06:NUMORD" type="Integer" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD06:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD06:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD06:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD06:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD06:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD06:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD06:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD06:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="IDTENT" id="HDD06:IDTENT" nullable="false" size="10"></column>
+      <column default=" " CIC="01" name="NUMAPE" id="HDD06:NUMAPE" nullable="false" size="02"></column>
+      <column default="0" CIC="01" name="NUMORD" id="HDD06:NUMORD" type="Integer" nullable="false"></column>
+    </table>
+    <table name="HDD08" instance="HDD08" mandatory="false" multiple="true">
+      <key name="IDTENT" mapping="[:nommbr]" id="HDD08:IDTENT" nullable="false"></key>
+      <key name="NUMORD" mapping="[HDD03:NUMORD]" id="HDD08:NUMORD" type="Integer" nullable="false"></key>
+      <key name="IDXEXN" id="HDD08:IDXEXN" nullable="false"></key>
+      <key name="NUMERO" id="HDD08:NUMERO" type="Integer" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD08:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD08:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD08:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD08:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD08:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD08:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD08:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD08:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="IDTENT" id="HDD08:IDTENT" nullable="false" size="10"></column>
+      <column default="0" CIC="01" name="NUMORD" id="HDD08:NUMORD" type="Integer" nullable="false"></column>
+      <column default=" " CIC="01" name="IDXEXN" id="HDD08:IDXEXN" nullable="false" size="01"></column>
+      <column default="0" CIC="01" name="NUMERO" id="HDD08:NUMERO" type="Integer" nullable="false"></column>
+      <column default="0" CIC="01" name="POSIDX" id="HDD08:POSIDX" type="Integer" nullable="false"></column>
+      <column default=" " CIC="01" name="NOMTBL" id="HDD08:NOMTBL" nullable="false" size="10"></column>
+      <column default="0" CIC="01" name="CHPTBL" id="HDD08:CHPTBL" type="Integer" nullable="false"></column>
+    </table>
+    <table name="HDD14" instance="HDD14" mandatory="false" multiple="true">
+      <key name="IDTENT" mapping="[:nommbr]" id="HDD14:IDTENT" nullable="false"></key>
+      <key name="NUMORD" mapping="[HDD03:NUMORD]" id="HDD14:NUMORD" type="Integer" nullable="false"></key>
+      <key name="CODLAN" id="HDD14:CODLAN" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD14:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD14:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD14:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD14:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD14:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD14:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD14:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD14:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="IDTENT" id="HDD14:IDTENT" nullable="false" size="10"></column>
+      <column default="0" CIC="21" name="NUMORD" id="HDD14:NUMORD" type="Integer" nullable="false"></column>
+      <column default=" " CIC="01" name="CODLAN" id="HDD14:CODLAN" nullable="false" size="02"></column>
+      <column default=" " CIC="01" name="REFMDC" id="HDD14:REFMDC" nullable="false" size="16"></column>
+      <column default=" " CIC="01" name="REFMTC" id="HDD14:REFMTC" nullable="false" size="16"></column>
+      <table name="HDD14m" instance="REFMDC" mandatory="false" multiple="false">
+        <key name="REFTEX" mapping="[HDD14:REFMDC]" id="HDD14m:REFTEX" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="HDD14m:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD14m:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD14m:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD14m:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD14m:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD14m:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD14m:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD14m:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="43" name="REFTEX" id="HDD14m:REFTEX" nullable="false" size="16"></column>
+        <column default="0" CIC="43" name="CPTMEM" id="HDD14m:CPTMEM" type="Integer" nullable="false"></column>
+        <column default=" " CIC="43" name="TEXMEM" id="HDD14m:TEXMEM" nullable="false" size="3000"></column>
+      </table>
+      <table name="HDD14m" instance="REFMTC" mandatory="false" multiple="false">
+        <key name="REFTEX" mapping="[HDD14:REFMTC]" id="HDD14m:REFTEX" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="HDD14m:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="HDD14m:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="HDD14m:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="HDD14m:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="HDD14m:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="HDD14m:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="HDD14m:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="HDD14m:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="43" name="REFTEX" id="HDD14m:REFTEX" nullable="false" size="16"></column>
+        <column default="0" CIC="43" name="CPTMEM" id="HDD14m:CPTMEM" type="Integer" nullable="false"></column>
+        <column default=" " CIC="43" name="TEXMEM" id="HDD14m:TEXMEM" nullable="false" size="3000"></column>
+      </table>
+    </table>
+  </table>
+  <table name="HDD05" instance="HDD05" mandatory="false" multiple="true">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD05:IDTENT" nullable="false"></key>
+    <key name="NUMIDX" id="HDD05:NUMIDX" type="Integer" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD05:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD05:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD05:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD05:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD05:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD05:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD05:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD05:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IDTENT" id="HDD05:IDTENT" nullable="false" size="10"></column>
+    <column default="0" CIC="01" name="NUMIDX" id="HDD05:NUMIDX" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="SWIUNI" id="HDD05:SWIUNI" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIQTN" id="HDD05:SWIQTN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIMOI" id="HDD05:SWIMOI" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIANN" id="HDD05:SWIANN" nullable="false" size="01"></column>
+    <column CIC="02" name="TBSNAM" id="HDD05:TBSNAM" nullable="true" update="false" size="30"></column>
+    <column CIC="02" name="INIEXT" id="HDD05:INIEXT" type="Integer" nullable="true" update="false"></column>
+  </table>
+  <table name="HDD07" instance="HDD07" mandatory="false" multiple="true">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD07:IDTENT" nullable="false"></key>
+    <key name="NUMAPE" id="HDD07:NUMAPE" nullable="false"></key>
+    <key name="CODLAN" id="HDD07:CODLAN" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD07:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD07:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD07:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD07:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD07:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD07:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD07:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD07:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IDTENT" id="HDD07:IDTENT" nullable="false" size="10"></column>
+    <column default=" " CIC="01" name="NUMAPE" id="HDD07:NUMAPE" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="CODLAN" id="HDD07:CODLAN" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="REFMDC" id="HDD07:REFMDC" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="REFMTC" id="HDD07:REFMTC" nullable="false" size="16"></column>
+    <column default=" " CIC="42" name="LIBAPE" id="HDD07:LIBAPE" nullable="false" size="50"></column>
+    <table name="HDD07m" instance="REFMDC" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[HDD07:REFMDC]" id="HDD07m:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD07m:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD07m:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD07m:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD07m:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD07m:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD07m:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD07m:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD07m:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="HDD07m:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="HDD07m:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="HDD07m:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="HDD07m" instance="REFMTC" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[HDD07:REFMTC]" id="HDD07m:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD07m:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD07m:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD07m:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD07m:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD07m:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD07m:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD07m:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD07m:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="HDD07m:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="HDD07m:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="HDD07m:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+  <table name="HDD16" instance="HDD16" mandatory="false" multiple="true">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD16:IDTENT" nullable="false"></key>
+    <key name="NUMCLE" id="HDD16:NUMCLE" type="Integer" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD16:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD16:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD16:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD16:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD16:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD16:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD16:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD16:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IDTENT" id="HDD16:IDTENT" nullable="false" size="10"></column>
+    <column default="0" CIC="01" name="NUMCLE" id="HDD16:NUMCLE" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="IDTENT_FK" id="HDD16:IDTENT_FK" nullable="false" size="10"></column>
+    <column CIC="01" name="SWIDOC" id="HDD16:SWIDOC" nullable="true" size="01"></column>
+    <column CIC="01" name="NOMJAV_FK" id="HDD16:NOMJAV_FK" nullable="true" size="64"></column>
+    <column CIC="01" name="SWIASS" id="HDD16:SWIASS" nullable="true" size="01"></column>
+    <column CIC="01" name="LIBASS" id="HDD16:LIBASS" nullable="true" size="35"></column>
+  </table>
+  <table name="HDD09" instance="HDD09" mandatory="false" multiple="false">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD09:IDTENT" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD09:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD09:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD09:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD09:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD09:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD09:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD09:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD09:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="03" name="IDTENT" id="HDD09:IDTENT" nullable="false" update="false" size="10"></column>
+    <column default=" " CIC="03" name="TYPDEC" id="HDD09:TYPDEC" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="03" name="FRQDEC" id="HDD09:FRQDEC" nullable="false" update="false" size="01"></column>
+    <column CIC="03" name="WHECLA" id="HDD09:WHECLA" nullable="true" update="false" size="200"></column>
+    <column default=" " CIC="03" name="ARCTYP" id="HDD09:ARCTYP" nullable="false" update="false" size="01"></column>
+    <column default="0" CIC="03" name="RETDUR" id="HDD09:RETDUR" type="Integer" nullable="false" update="false"></column>
+  </table>
+  <table name="HDD10" instance="HDD10" mandatory="false" multiple="true">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD10:IDTENT" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD10:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD10:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD10:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD10:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD10:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD10:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD10:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD10:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="03" name="NOMPAC" id="HDD10:NOMPAC" nullable="false" update="false" size="10"></column>
+    <column default=" " CIC="03" name="IDTENT" id="HDD10:IDTENT" nullable="false" update="false" size="10"></column>
+    <column default=" " CIC="03" name="CODSOC" id="HDD10:CODSOC" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="03" name="DATDDD" id="HDD10:DATDDD" nullable="false" update="false" size="08"></column>
+    <column default=" " CIC="03" name="HEUDDD" id="HDD10:HEUDDD" nullable="false" update="false" size="08"></column>
+    <column default=" " CIC="03" name="SWIDEC" id="HDD10:SWIDEC" nullable="false" update="false" size="01"></column>
+  </table>
+  <table name="HDD12" instance="HDD12" mandatory="false" multiple="true">
+    <key name="IDTENT" mapping="[:nommbr]" id="HDD12:IDTENT" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="HDD12:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="HDD12:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="HDD12:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="HDD12:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="HDD12:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="HDD12:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="HDD12:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="HDD12:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="03" name="IDTENT" id="HDD12:IDTENT" nullable="false" update="false" size="10"></column>
+    <column default=" " CIC="03" name="GRPNUM" id="HDD12:GRPNUM" nullable="false" update="false" size="03"></column>
+    <column default=" " CIC="03" name="PHYNAM" id="HDD12:PHYNAM" nullable="false" update="false" size="128"></column>
+    <table name="HDD13" instance="HDD13" mandatory="false" multiple="true">
+      <key name="GRPNUM" mapping="[HDD12:GRPNUM]" id="HDD13:GRPNUM" nullable="false"></key>
+      <key name="IDTENT" mapping="[HDD12:IDTENT]" id="HDD13:IDTENT" nullable="false"></key>
+      <key name="IDTSOC" id="HDD13:IDTSOC" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="HDD13:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="HDD13:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="HDD13:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="HDD13:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="HDD13:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="HDD13:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="HDD13:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="HDD13:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="03" name="IDTENT" id="HDD13:IDTENT" nullable="false" update="false" size="10"></column>
+      <column default=" " CIC="03" name="GRPNUM" id="HDD13:GRPNUM" nullable="false" update="false" size="03"></column>
+      <column default=" " CIC="03" name="IDTSOC" id="HDD13:IDTSOC" nullable="false" update="false" size="01"></column>
+    </table>
+  </table>
+</member>
+

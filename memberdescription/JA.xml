@@ -1,0 +1,110 @@
+<member multicompany="true" type="JA" companies="1" dictionnary="true">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="CWDM2" instance="CWDM2" mandatory="false" multiple="false">
+    <key name="MNUOWN" mapping="[:nommbr]::(.*)/.*" id="CWDM2:MNUOWN" nullable="false"></key>
+    <key name="LBLIDT" mapping="[:nommbr]::.*/(.*)" id="CWDM2:LBLIDT" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="CWDM2:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="CWDM2:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="CWDM2:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="CWDM2:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="CWDM2:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="CWDM2:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="CWDM2:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="CWDM2:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="MNUOWN" id="CWDM2:MNUOWN" nullable="false" size="32"></column>
+    <column default=" " CIC="01" name="MNUSTA" id="CWDM2:MNUSTA" nullable="false" size="32"></column>
+    <column default=" " CIC="01" name="LBLIDT" id="CWDM2:LBLIDT" nullable="false" size="32"></column>
+    <table name="CWDM4" instance="CWDM4_START" mandatory="false" multiple="true">
+      <key name="MNUDSC" mapping="[CWDM2:MNUSTA]" id="CWDM4:MNUDSC" nullable="false"></key>
+      <key name="DSCLAN" id="CWDM4:DSCLAN" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="CWDM4:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="CWDM4:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="CWDM4:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="CWDM4:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="CWDM4:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="CWDM4:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="CWDM4:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="CWDM4:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="MNUDSC" id="CWDM4:MNUDSC" nullable="false" size="32"></column>
+      <column default=" " CIC="01" name="DSCLAN" id="CWDM4:DSCLAN" nullable="false" size="32"></column>
+      <column CIC="01" name="MEMREF" id="CWDM4:MEMREF" nullable="true" size="3000"></column>
+    </table>
+    <table name="CWDM3" instance="CWDM3" recursive=" n2.brdcrb = n1.brdcrb || '/' || n1.nommnu " mandatory="false" multiple="true">
+      <key name="BRDCRB" mapping="[CWDM2:MNUSTA]" id="CWDM3:BRDCRB" nullable="false"></key>
+      <key name="NOMMNU" id="CWDM3:NOMMNU" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="CWDM3:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="CWDM3:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="CWDM3:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="CWDM3:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="CWDM3:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="CWDM3:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="CWDM3:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="CWDM3:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="NOMMNU" id="CWDM3:NOMMNU" nullable="false" size="100"></column>
+      <column CIC="01" name="CODPRP" id="CWDM3:CODPRP" nullable="true" size="32"></column>
+      <column CIC="01" name="MNUQLS" id="CWDM3:MNUQLS" nullable="true" size="100"></column>
+      <column default=" " CIC="01" name="MNUOWN" id="CWDM3:MNUOWN" nullable="false" size="32"></column>
+      <column default=" " CIC="01" name="BRDCRB" id="CWDM3:BRDCRB" nullable="false" size="128"></column>
+      <column default=" " CIC="01" name="LBLIDT" id="CWDM3:LBLIDT" nullable="false" size="32"></column>
+    </table>
+    <table name="CWDM1" instance="CWDM1" recursive="n2.mnupar = n1.mnuenf " mandatory="false" multiple="true">
+      <key name="MNUPAR" mapping="[CWDM2:MNUSTA]" id="CWDM1:MNUPAR" nullable="false"></key>
+      <key name="MNUENF" id="CWDM1:MNUENF" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="CWDM1:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="CWDM1:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="CWDM1:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="CWDM1:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="CWDM1:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="CWDM1:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="CWDM1:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="CWDM1:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="MNUPAR" id="CWDM1:MNUPAR" nullable="false" size="32"></column>
+      <column default=" " CIC="01" name="MNUENF" id="CWDM1:MNUENF" nullable="false" size="32"></column>
+      <column default="0" CIC="01" name="ORDENF" id="CWDM1:ORDENF" type="Integer" nullable="false"></column>
+      <column default="0" CIC="01" name="ORDLNK" id="CWDM1:ORDLNK" type="Integer" nullable="false"></column>
+      <table name="CWDM4" instance="CWDM4_KID" mandatory="false" multiple="true">
+        <key name="MNUDSC" mapping="[CWDM1:MNUENF]" id="CWDM4:MNUDSC" nullable="false"></key>
+        <key name="DSCLAN" id="CWDM4:DSCLAN" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="CWDM4:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="CWDM4:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="CWDM4:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="CWDM4:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="CWDM4:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="CWDM4:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="CWDM4:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="CWDM4:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="01" name="MNUDSC" id="CWDM4:MNUDSC" nullable="false" size="32"></column>
+        <column default=" " CIC="01" name="DSCLAN" id="CWDM4:DSCLAN" nullable="false" size="32"></column>
+        <column CIC="01" name="MEMREF" id="CWDM4:MEMREF" nullable="true" size="3000"></column>
+      </table>
+    </table>
+  </table>
+</member>
+

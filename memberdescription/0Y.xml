@@ -1,0 +1,68 @@
+<member multicompany="true" type="0Y" companies="1" order="O">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="FCD47" instance="FCD47" mandatory="false" multiple="false">
+    <key name="TYPRUL" mapping="[:nommbr]::(.*)/.*" id="FCD47:TYPRUL" nullable="false"></key>
+    <key name="REFRUL" mapping="[:nommbr]::.*/(.*)" id="FCD47:REFRUL" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="FCD47:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="FCD47:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="FCD47:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="FCD47:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="FCD47:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="FCD47:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="FCD47:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="FCD47:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="21" name="REFRUL" id="FCD47:REFRUL" nullable="false" size="16"></column>
+    <column default=" " CIC="21" name="TYPRUL" id="FCD47:TYPRUL" nullable="false" size="04"></column>
+    <column default=" " CIC="03" name="VALCRI_1" id="FCD47:VALCRI_1" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_2" id="FCD47:VALCRI_2" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_3" id="FCD47:VALCRI_3" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_4" id="FCD47:VALCRI_4" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_5" id="FCD47:VALCRI_5" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_6" id="FCD47:VALCRI_6" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_7" id="FCD47:VALCRI_7" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_8" id="FCD47:VALCRI_8" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_9" id="FCD47:VALCRI_9" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="03" name="VALCRI_10" id="FCD47:VALCRI_10" nullable="false" update="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_1" id="FCD47:VALATT_1" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_2" id="FCD47:VALATT_2" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_3" id="FCD47:VALATT_3" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_4" id="FCD47:VALATT_4" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_5" id="FCD47:VALATT_5" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_6" id="FCD47:VALATT_6" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_7" id="FCD47:VALATT_7" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_8" id="FCD47:VALATT_8" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_9" id="FCD47:VALATT_9" nullable="false" size="35"></column>
+    <column default=" " CIC="21" name="VALATT_10" id="FCD47:VALATT_10" nullable="false" size="35"></column>
+    <column default="0" CIC="21" name="COEPTC" id="FCD47:COEPTC" type="Integer" nullable="false"></column>
+    <column default=" " CIC="21" name="STADAT" id="FCD47:STADAT" nullable="false" size="08"></column>
+    <column default=" " CIC="21" name="ENDDAT" id="FCD47:ENDDAT" nullable="false" size="08"></column>
+  </table>
+</member>
+

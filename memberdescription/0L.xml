@@ -1,0 +1,69 @@
+<member type="0L">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="VAD01" instance="VAD01" mandatory="false" multiple="true">
+    <key name="NOMCOP" mapping="[:nommbr]" id="VAD01:NOMCOP" nullable="false"></key>
+    <key name="NOMVAR" id="VAD01:NOMVAR" nullable="false"></key>
+    <column CIC="22" name="NUMVER" id="VAD01:NUMVER" type="Integer" nullable="true"></column>
+    <column CIC="22" name="REFMAJ" id="VAD01:REFMAJ" nullable="true" size="16"></column>
+    <column CIC="22" name="DATCRT" id="VAD01:DATCRT" nullable="true" size="08"></column>
+    <column CIC="22" name="DATMAJ" id="VAD01:DATMAJ" nullable="true" size="08"></column>
+    <column CIC="22" name="HEUMAJ" id="VAD01:HEUMAJ" nullable="true" size="08"></column>
+    <column CIC="22" name="USRMAJ" id="VAD01:USRMAJ" nullable="true" size="03"></column>
+    <column CIC="22" name="PGMMAJ" id="VAD01:PGMMAJ" nullable="true" size="06"></column>
+    <column CIC="22" name="STAANN" id="VAD01:STAANN" nullable="true" size="01"></column>
+    <column default=" " CIC="01" name="NOMCOP" id="VAD01:NOMCOP" nullable="false" size="09"></column>
+    <column default=" " CIC="01" name="NOMVAR" id="VAD01:NOMVAR" nullable="false" size="14"></column>
+    <column CIC="42" name="LIBVAR" id="VAD01:LIBVAR" nullable="true" size="35"></column>
+    <column CIC="03" name="VALVAR" id="VAD01:VALVAR" nullable="true" update="false" size="132"></column>
+    <column CIC="01" name="TYPVAR" id="VAD01:TYPVAR" nullable="true" size="01"></column>
+    <column CIC="03" name="LONVAR" id="VAD01:LONVAR" type="Integer" nullable="true" update="false"></column>
+    <column CIC="03" name="LONVAR_REE" id="VAD01:LONVAR_REE" type="Integer" nullable="true" update="false"></column>
+    <column CIC="01" name="SWITFT" id="VAD01:SWITFT" nullable="true" size="01"></column>
+    <column CIC="01" name="REFTEX" id="VAD01:REFTEX" nullable="true" size="16"></column>
+    <column default=" " CIC="01" name="GSTPAR" id="VAD01:GSTPAR" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPPAR" id="VAD01:TYPPAR" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDYN" id="VAD01:SWIDYN" nullable="false" size="01"></column>
+    <table name="VAD01m" instance="VAD01m" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[VAD01:REFTEX]" id="VAD01m:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="VAD01m:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="VAD01m:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="VAD01m:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="VAD01m:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="VAD01m:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="VAD01m:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="VAD01m:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="VAD01m:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="VAD01m:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="VAD01m:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="VAD01m:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+</member>
+

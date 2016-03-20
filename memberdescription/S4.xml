@@ -1,0 +1,86 @@
+<member type="S4" dictionnary="true" order="P">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="YSD01" instance="YSD01" mandatory="false" multiple="false">
+    <key name="TYPMBR" mapping="[:nommbr]" id="YSD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YSD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YSD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YSD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YSD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YSD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YSD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YSD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YSD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YSD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="NOMTYP" id="YSD01:NOMTYP" nullable="false" size="50"></column>
+    <column default=" " CIC="01" name="NOMLOG" id="YSD01:NOMLOG" nullable="false" size="50"></column>
+    <column default=" " CIC="01" name="SWIDBI" id="YSD01:SWIDBI" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="ORDGEN" id="YSD01:ORDGEN" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="SWIDOC_LNK" id="YSD01:SWIDOC_LNK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDOC_FD" id="YSD01:SWIDOC_FD" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIJDB" id="YSD01:SWIJDB" nullable="false" size="01"></column>
+  </table>
+  <table name="YSD02" instance="YSD02" mandatory="false" multiple="false">
+    <key name="TYPMBR" mapping="[:nommbr]" id="YSD02:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YSD02:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YSD02:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YSD02:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YSD02:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YSD02:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YSD02:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YSD02:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YSD02:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NUMFIL" id="YSD02:NUMFIL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YSD02:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TECHNO" id="YSD02:TECHNO" nullable="false" size="04"></column>
+    <column CIC="01" name="PHYEXT" id="YSD02:PHYEXT" nullable="true" size="15"></column>
+    <column default=" " CIC="01" name="SWIGEN" id="YSD02:SWIGEN" nullable="false" size="01"></column>
+    <column CIC="01" name="SRCPAT" id="YSD02:SRCPAT" nullable="true" size="100"></column>
+    <column default=" " CIC="01" name="ROOPAT" id="YSD02:ROOPAT" nullable="false" size="30"></column>
+    <column default=" " CIC="01" name="SWILNK" id="YSD02:SWILNK" nullable="false" size="01"></column>
+  </table>
+  <table name="YSD03" instance="YSD03" mandatory="false" multiple="true">
+    <key name="TYPMBR" mapping="[:nommbr]" id="YSD03:TYPMBR" nullable="false"></key>
+    <key name="LOGPAT" id="YSD03:LOGPAT" nullable="false"></key>
+    <column CIC="22" name="NUMVER" id="YSD03:NUMVER" type="Integer" nullable="true"></column>
+    <column CIC="22" name="REFMAJ" id="YSD03:REFMAJ" nullable="true" size="16"></column>
+    <column CIC="22" name="DATCRT" id="YSD03:DATCRT" nullable="true" size="08"></column>
+    <column CIC="22" name="DATMAJ" id="YSD03:DATMAJ" nullable="true" size="08"></column>
+    <column CIC="22" name="HEUMAJ" id="YSD03:HEUMAJ" nullable="true" size="08"></column>
+    <column CIC="22" name="USRMAJ" id="YSD03:USRMAJ" nullable="true" size="03"></column>
+    <column CIC="22" name="PGMMAJ" id="YSD03:PGMMAJ" nullable="true" size="06"></column>
+    <column CIC="22" name="STAANN" id="YSD03:STAANN" nullable="true" size="01"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YSD03:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="LOGPAT" id="YSD03:LOGPAT" nullable="false" size="100"></column>
+    <column default=" " CIC="01" name="PHYPAT" id="YSD03:PHYPAT" nullable="false" size="256"></column>
+    <column CIC="01" name="PHYPA2" id="YSD03:PHYPA2" nullable="true" size="100"></column>
+    <column default=" " CIC="01" name="SWICRE" id="YSD03:SWICRE" nullable="false" size="01"></column>
+  </table>
+</member>
+

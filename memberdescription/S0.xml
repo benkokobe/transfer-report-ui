@@ -1,0 +1,200 @@
+<member type="S0" dictionnary="false" order="P">
+  <table name="YED01" instance="YED01" mandatory="false" multiple="true">
+    <key name="REFMAI" mapping="[:nommbr]" id="YED01:REFMAI" nullable="false"></key>
+    <key name="VERMAI" id="YED01:VERMAI" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YED01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YED01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YED01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YED01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YED01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YED01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YED01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YED01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="REFMAI" id="YED01:REFMAI" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="VERMAI" id="YED01:VERMAI" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="ITTMAI" id="YED01:ITTMAI" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="ATEMAI" id="YED01:ATEMAI" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DATMAI" id="YED01:DATMAI" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="REFTEX_DSC" id="YED01:REFTEX_DSC" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YED01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPEVL" id="YED01:TYPEVL" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="CODSEV" id="YED01:CODSEV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CODFLT" id="YED01:CODFLT" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="IPCMAI" id="YED01:IPCMAI" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="DATECH" id="YED01:DATECH" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TEXECH" id="YED01:TEXECH" nullable="false" size="16"></column>
+    <column default="0" CIC="01" name="TPSDVT" id="YED01:TPSDVT" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="INSTDC" id="YED01:INSTDC" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="ATEANA" id="YED01:ATEANA" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DATANA" id="YED01:DATANA" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YED01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="ATEDVT" id="YED01:ATEDVT" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DATDVT" id="YED01:DATDVT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="STAMAI" id="YED01:STAMAI" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="SWICTL_PRG" id="YED01:SWICTL_PRG" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="ATECTL_PRG" id="YED01:ATECTL_PRG" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DATCTL_PRG" id="YED01:DATCTL_PRG" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="SWICTL_TST" id="YED01:SWICTL_TST" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="ATECTL_TST" id="YED01:ATECTL_TST" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DATCTL_TST" id="YED01:DATCTL_TST" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="SWICTL_EXP" id="YED01:SWICTL_EXP" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="ATECTL_EXP" id="YED01:ATECTL_EXP" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DATCTL_EXP" id="YED01:DATCTL_EXP" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="REFTFT" id="YED01:REFTFT" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="REFMAI_CW" id="YED01:REFMAI_CW" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SWISTD" id="YED01:SWISTD" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIPAT" id="YED01:SWIPAT" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="REFTEX_TST" id="YED01:REFTEX_TST" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="REFTEX_CXT" id="YED01:REFTEX_CXT" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="REFTEX_CSQ" id="YED01:REFTEX_CSQ" nullable="false" size="16"></column>
+    <table name="YED01M" instance="REFTEX_DSC" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[YED01:REFTEX_DSC]" id="YED01M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED01M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED01M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED01M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED01M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED01M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED01M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED01M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED01M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="YED01M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="YED01M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="YED01M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="YED01M" instance="REFTEX" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[YED01:REFTEX]" id="YED01M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED01M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED01M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED01M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED01M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED01M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED01M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED01M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED01M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="YED01M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="YED01M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="YED01M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="YED01M" instance="REFTEX_TST" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[YED01:REFTEX_TST]" id="YED01M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED01M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED01M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED01M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED01M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED01M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED01M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED01M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED01M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="YED01M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="YED01M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="YED01M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="YED01M" instance="REFTEX_CXT" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[YED01:REFTEX_CXT]" id="YED01M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED01M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED01M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED01M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED01M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED01M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED01M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED01M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED01M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="YED01M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="YED01M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="YED01M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="YED01M" instance="REFTEX_CSQ" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[YED01:REFTEX_CSQ]" id="YED01M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED01M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED01M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED01M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED01M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED01M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED01M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED01M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED01M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="YED01M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="YED01M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="YED01M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+    <table name="YED02" instance="YED02" mandatory="false" multiple="true">
+      <key name="REFMAI" mapping="[YED01:REFMAI]" id="YED02:REFMAI" nullable="false"></key>
+      <key name="VERMAI" mapping="[YED01:VERMAI]" id="YED02:VERMAI" nullable="false"></key>
+      <key name="NOMMBR" id="YED02:NOMMBR" nullable="false"></key>
+      <key name="TYPMBR" id="YED02:TYPMBR" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED02:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED02:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED02:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED02:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED02:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED02:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED02:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED02:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="REFMAI" id="YED02:REFMAI" nullable="false" size="06"></column>
+      <column default=" " CIC="01" name="VERMAI" id="YED02:VERMAI" nullable="false" size="08"></column>
+      <column default=" " CIC="01" name="NOMMBR" id="YED02:NOMMBR" nullable="false" size="256"></column>
+      <column default=" " CIC="01" name="TYPMBR" id="YED02:TYPMBR" nullable="false" size="02"></column>
+      <column default=" " CIC="01" name="TYPACT" id="YED02:TYPACT" nullable="false" size="01"></column>
+      <column default=" " CIC="01" name="REFTEX" id="YED02:REFTEX" nullable="false" size="16"></column>
+      <column default=" " CIC="01" name="COMSRC" id="YED02:COMSRC" nullable="false" size="200"></column>
+      <table name="YED02M" instance="YED02M" mandatory="false" multiple="false">
+        <key name="REFTEX" mapping="[YED02:REFTEX]" id="YED02M:REFTEX" nullable="false"></key>
+        <column default="0" CIC="22" name="NUMVER" id="YED02M:NUMVER" type="Integer" nullable="false"></column>
+        <column default=" " CIC="22" name="REFMAJ" id="YED02M:REFMAJ" nullable="false" size="16"></column>
+        <column default=" " CIC="22" name="DATCRT" id="YED02M:DATCRT" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="DATMAJ" id="YED02M:DATMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="HEUMAJ" id="YED02M:HEUMAJ" nullable="false" size="08"></column>
+        <column default=" " CIC="22" name="USRMAJ" id="YED02M:USRMAJ" nullable="false" size="03"></column>
+        <column default=" " CIC="22" name="PGMMAJ" id="YED02M:PGMMAJ" nullable="false" size="06"></column>
+        <column default=" " CIC="22" name="STAANN" id="YED02M:STAANN" nullable="false" size="01"></column>
+        <column default=" " CIC="43" name="REFTEX" id="YED02M:REFTEX" nullable="false" size="16"></column>
+        <column default="0" CIC="43" name="CPTMEM" id="YED02M:CPTMEM" type="Integer" nullable="false"></column>
+        <column default=" " CIC="43" name="TEXMEM" id="YED02M:TEXMEM" nullable="false" size="3000"></column>
+      </table>
+    </table>
+  </table>
+  <table name="YED23" instance="YED23" mandatory="false" multiple="true">
+    <key name="REFMAI" mapping="[:nommbr]" id="YED23:REFMAI" nullable="false"></key>
+    <key name="ORDOPN" id="YED23:ORDOPN" nullable="false"></key>
+    <key name="NUMSTP" id="YED23:NUMSTP" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YED23:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YED23:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YED23:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YED23:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YED23:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YED23:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YED23:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YED23:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="REFMAI" id="YED23:REFMAI" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="ORDOPN" id="YED23:ORDOPN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NUMSTP" id="YED23:NUMSTP" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="TYPOPN" id="YED23:TYPOPN" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SWIMAN" id="YED23:SWIMAN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="VERNUM" id="YED23:VERNUM" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="SWIMLT" id="YED23:SWIMLT" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YED23:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="ITTCMD" id="YED23:ITTCMD" nullable="false" size="2000"></column>
+    <column default=" " CIC="01" name="SWICTN" id="YED23:SWICTN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CODCMD" id="YED23:CODCMD" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YED23:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YED23:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="INSTDC" id="YED23:INSTDC" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SWIMOD" id="YED23:SWIMOD" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YED23:REFTEX" nullable="false" size="16"></column>
+    <table name="YED23M" instance="YED23M" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[YED23:REFTEX]" id="YED23M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="YED23M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="YED23M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="YED23M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="YED23M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="YED23M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="YED23M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="YED23M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="YED23M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="YED23M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="YED23M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="YED23M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+</member>
+

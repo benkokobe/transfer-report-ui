@@ -1,0 +1,34 @@
+<member mode="load" type="S3" dictionnary="false" order="P">
+  <table name="DPD01" instance="DPD01" mandatory="false" multiple="true">
+    <key name="CODPRP" id="DPD01:CODPRP" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="DPD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="DPD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="DPD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="DPD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="DPD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="DPD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="DPD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="DPD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CODPRP" id="DPD01:CODPRP" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SWICHK" id="DPD01:SWICHK" nullable="false" size="01"></column>
+    <column default="0" CIC="01" name="LONPRP" id="DPD01:LONPRP" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LONZON" id="DPD01:LONZON" type="Integer" nullable="false"></column>
+  </table>
+  <table name="DPD02" instance="DPD02" mandatory="false" multiple="true">
+    <key name="CODPRP" id="DPD02:CODPRP" nullable="false"></key>
+    <key name="CODLAN" id="DPD02:CODLAN" nullable="false"></key>
+    <column CIC="22" name="NUMVER" id="DPD02:NUMVER" type="Integer" nullable="true"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="DPD02:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="DPD02:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="DPD02:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="DPD02:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="DPD02:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="DPD02:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="DPD02:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CODPRP" id="DPD02:CODPRP" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="CODLAN" id="DPD02:CODLAN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="LIBPRP" id="DPD02:LIBPRP" nullable="false" size="80"></column>
+    <column default=" " CIC="01" name="LIBPCP" id="DPD02:LIBPCP" nullable="false" size="80"></column>
+  </table>
+</member>
+

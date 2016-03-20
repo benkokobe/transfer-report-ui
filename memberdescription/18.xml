@@ -1,0 +1,95 @@
+<member multicompany="true" update="false" insert="false" type="18" companies="1" order="O">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="CCD51" instance="CCD51" mandatory="false" multiple="false">
+    <key name="NATENC" mapping="[:nommbr]" id="CCD51:NATENC" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="CCD51:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="CCD51:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="CCD51:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="CCD51:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="CCD51:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="CCD51:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="CCD51:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="CCD51:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="02" name="NATENC" id="CCD51:NATENC" nullable="false" update="false" size="06"></column>
+    <column CIC="03" name="DATFIN_COM" id="CCD51:DATFIN_COM" nullable="true" update="false" size="08"></column>
+    <column default=" " CIC="41" name="LIBEL1_1" id="CCD51:LIBEL1_1" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL1_2" id="CCD51:LIBEL1_2" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL1_3" id="CCD51:LIBEL1_3" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL1_4" id="CCD51:LIBEL1_4" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBPEG_1" id="CCD51:LIBPEG_1" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBPEG_2" id="CCD51:LIBPEG_2" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBPEG_3" id="CCD51:LIBPEG_3" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBPEG_4" id="CCD51:LIBPEG_4" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL2_1" id="CCD51:LIBEL2_1" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL2_2" id="CCD51:LIBEL2_2" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL2_3" id="CCD51:LIBEL2_3" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBEL2_4" id="CCD51:LIBEL2_4" nullable="false" size="35"></column>
+    <column default=" " CIC="02" name="TYPCPT" id="CCD51:TYPCPT" nullable="false" update="false" size="02"></column>
+    <column default=" " CIC="03" name="CTXCPT" id="CCD51:CTXCPT" nullable="false" update="false" size="15"></column>
+    <column default=" " CIC="03" name="CODARR" id="CCD51:CODARR" nullable="false" update="false" size="02"></column>
+    <column default=" " CIC="03" name="TYPFRS" id="CCD51:TYPFRS" nullable="false" update="false" size="02"></column>
+    <column default=" " CIC="03" name="IDTFOR" id="CCD51:IDTFOR" nullable="false" update="false" size="03"></column>
+    <column default="0" CIC="02" name="ORDTRI" id="CCD51:ORDTRI" type="Integer" nullable="false" update="false"></column>
+    <column default=" " CIC="02" name="SWIEDI_BAL" id="CCD51:SWIEDI_BAL" nullable="false" update="false" size="01"></column>
+    <column default="0" CIC="02" name="NBRJOU_HIS" id="CCD51:NBRJOU_HIS" type="Integer" nullable="false" update="false"></column>
+    <column default="0" CIC="02" name="NBRJOU_PI" id="CCD51:NBRJOU_PI" type="Integer" nullable="false" update="false"></column>
+    <column default=" " CIC="02" name="SWIBIL" id="CCD51:SWIBIL" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIENC" id="CCD51:SWIENC" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIBAN" id="CCD51:SWIBAN" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIPRF" id="CCD51:SWIPRF" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIDIP" id="CCD51:SWIDIP" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICIP" id="CCD51:SWICIP" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIAUT" id="CCD51:SWIAUT" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIPLA" id="CCD51:SWIPLA" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIPEG" id="CCD51:SWIPEG" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIREP" id="CCD51:SWIREP" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="FLTOBL" id="CCD51:FLTOBL" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SOLDEB" id="CCD51:SOLDEB" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SOLCRE" id="CCD51:SOLCRE" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICHL" id="CCD51:SWICHL" nullable="false" update="false" size="01"></column>
+    <column default="0" CIC="02" name="PCTNML" id="CCD51:PCTNML" type="Integer" nullable="false" update="false"></column>
+    <column default=" " CIC="02" name="SWICLI_ORI" id="CCD51:SWICLI_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICPT_ORI" id="CCD51:SWICPT_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICTX_ORI" id="CCD51:SWICTX_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIRES_ORI" id="CCD51:SWIRES_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIRES_MME_ORI" id="CCD51:SWIRES_MME_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWILIB_ORI" id="CCD51:SWILIB_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWITYP_CLI_ORI" id="CCD51:SWITYP_CLI_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICOD_TIT_ORI" id="CCD51:SWICOD_TIT_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIENC_ORI" id="CCD51:SWIENC_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIDAT_RNV_ORI" id="CCD51:SWIDAT_RNV_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIPDT_CLA_ORI" id="CCD51:SWIPDT_CLA_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIBUT_CTR_ORI" id="CCD51:SWIBUT_CTR_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWITYP_TIT_ORI" id="CCD51:SWITYP_TIT_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWICAT_CPT_ORI" id="CCD51:SWICAT_CPT_ORI" nullable="false" update="false" size="01"></column>
+    <column default=" " CIC="02" name="SWIDUR_INI_ORI" id="CCD51:SWIDUR_INI_ORI" nullable="false" update="false" size="01"></column>
+  </table>
+</member>
+

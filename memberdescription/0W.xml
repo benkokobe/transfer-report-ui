@@ -1,0 +1,104 @@
+<member multicompany="true" type="0W" companies="1">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="XVD01" instance="XVD01" mandatory="false" multiple="true">
+    <key name="TYPEVT" mapping="[:nommbr]::(.*)/.*" id="XVD01:TYPEVT" nullable="false"></key>
+    <key name="SUBEVT" mapping="[:nommbr]::.*/(.*)" id="XVD01:SUBEVT" nullable="false"></key>
+    <column default=" " CIC="22" name="REFMAJ" id="XVD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="XVD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="XVD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="XVD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="XVD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="XVD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="XVD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPEVT" id="XVD01:TYPEVT" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="SUBEVT" id="XVD01:SUBEVT" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SUBEVT_LIB" id="XVD01:SUBEVT_LIB" nullable="false" size="35"></column>
+    <column default=" " CIC="01" name="SWICON" id="XVD01:SWICON" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="REFTEX" id="XVD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWIACT" id="XVD01:SWIACT" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIPRF" id="XVD01:SWIPRF" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="FINPRF" id="XVD01:FINPRF" nullable="false" size="06"></column>
+    <table name="XVD01M" instance="XVD01M" mandatory="false" multiple="true">
+      <key name="REFTEX" mapping="[XVD01:REFTEX]" id="XVD01M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="XVD01M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="XVD01M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="XVD01M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="XVD01M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="XVD01M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="XVD01M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="XVD01M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="XVD01M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="XVD01M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="XVD01M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="XVD01M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+  <table name="XVD02" instance="XVD02" mandatory="false" multiple="true">
+    <key name="TYPEVT" mapping="[:nommbr]::(.*)/.*" id="XVD02:TYPEVT" nullable="false"></key>
+    <key name="SUBEVT" mapping="[:nommbr]::.*/(.*)" id="XVD02:SUBEVT" nullable="false"></key>
+    <key name="SUBEVT_ELT" id="XVD02:SUBEVT_ELT" nullable="false"></key>
+    <column default=" " CIC="22" name="REFMAJ" id="XVD02:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="XVD02:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="XVD02:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="XVD02:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="XVD02:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="XVD02:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="XVD02:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPEVT" id="XVD02:TYPEVT" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="SUBEVT" id="XVD02:SUBEVT" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SUBEVT_ELT" id="XVD02:SUBEVT_ELT" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="TYPEVT_CMP" id="XVD02:TYPEVT_CMP" nullable="false" size="20"></column>
+    <column default=" " CIC="01" name="TYPEVT_ELT" id="XVD02:TYPEVT_ELT" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="TFTTYP" id="XVD02:TFTTYP" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="DEFVAL" id="XVD02:DEFVAL" nullable="false" size="35"></column>
+    <column default=" " CIC="01" name="REFTEX" id="XVD02:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="NUMTBL" id="XVD02:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="ZONTBL" id="XVD02:ZONTBL" nullable="false" size="10"></column>
+    <column default=" " CIC="01" name="NOMFIC" id="XVD02:NOMFIC" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="NUMCLE" id="XVD02:NUMCLE" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="ZONFIC" id="XVD02:ZONFIC" nullable="false" size="10"></column>
+    <column default="0" CIC="01" name="OCCCOB" id="XVD02:OCCCOB" type="Integer" nullable="false"></column>
+    <table name="XVD02M" instance="XVD02M" mandatory="false" multiple="true">
+      <key name="REFTEX" mapping="[XVD02:REFTEX]" id="XVD02M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="XVD02M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="XVD02M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="XVD02M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="XVD02M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="XVD02M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="XVD02M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="XVD02M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="XVD02M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="XVD02M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="XVD02M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="XVD02M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+</member>
+

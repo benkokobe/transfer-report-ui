@@ -1,0 +1,58 @@
+<member type="JI" dictionnary="true">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="CWDR1" instance="CWDR1" mandatory="false" multiple="false">
+    <key name="NOMREG" mapping="[:nommbr]" id="CWDR1:NOMREG" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="CWDR1:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="CWDR1:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="CWDR1:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="CWDR1:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="CWDR1:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="CWDR1:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="CWDR1:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="CWDR1:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMREG" id="CWDR1:NOMREG" nullable="false" size="128"></column>
+    <column default=" " CIC="01" name="DSCREG" id="CWDR1:DSCREG" nullable="false" size="95"></column>
+    <column default=" " CIC="01" name="NOMSCO" id="CWDR1:NOMSCO" nullable="false" size="02"></column>
+    <column CIC="01" name="VALSCO" id="CWDR1:VALSCO" nullable="true" size="70"></column>
+    <column default=" " CIC="01" name="REGCAT" id="CWDR1:REGCAT" nullable="false" size="02"></column>
+    <column default="0" CIC="01" name="ARGNUM" id="CWDR1:ARGNUM" type="Integer" nullable="false"></column>
+    <column CIC="01" name="TYPARG_1" id="CWDR1:TYPARG_1" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPARG_2" id="CWDR1:TYPARG_2" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPARG_3" id="CWDR1:TYPARG_3" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPARG_4" id="CWDR1:TYPARG_4" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPARG_5" id="CWDR1:TYPARG_5" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPARG_6" id="CWDR1:TYPARG_6" nullable="true" size="128"></column>
+    <column CIC="01" name="TYPARG_7" id="CWDR1:TYPARG_7" nullable="true" size="128"></column>
+    <column default=" " CIC="01" name="TYPREG" id="CWDR1:TYPREG" nullable="false" size="02"></column>
+    <column CIC="01" name="SWIOPE" id="CWDR1:SWIOPE" nullable="true" size="01"></column>
+    <column CIC="01" name="CLSREG" id="CWDR1:CLSREG" nullable="true" size="128"></column>
+  </table>
+</member>
+

@@ -1,0 +1,78 @@
+<member type="14" order="O">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="MSD01" instance="MSD01" mandatory="false" multiple="true" noDeleteIfUpdate="true">
+    <key name="TYPMSG" mapping="[:nommbr]::(....)..." id="MSD01:TYPMSG" nullable="false"></key>
+    <key name="SPTTRM" mapping="[:nommbr]::....(...)" id="MSD01:SPTTRM" nullable="false"></key>
+    <key name="CODLAN" id="MSD01:CODLAN" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="MSD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="MSD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="MSD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="MSD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="MSD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="MSD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="MSD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="MSD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPMSG" id="MSD01:TYPMSG" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="SPTTRM" id="MSD01:SPTTRM" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="CODLAN" id="MSD01:CODLAN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMCOP" id="MSD01:NOMCOP" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="DSCMAQ" id="MSD01:DSCMAQ" nullable="false" size="35"></column>
+    <column default=" " CIC="01" name="NOMROU" id="MSD01:NOMROU" nullable="false" size="08"></column>
+  </table>
+  <table name="MSD02" instance="MSD02" mandatory="false" multiple="true" noDeleteIfUpdate="true">
+    <key name="TYPMSG" mapping="[:nommbr]::(....)..." id="MSD02:TYPMSG" nullable="false"></key>
+    <key name="NUMVAR" id="MSD02:NUMVAR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="MSD02:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="MSD02:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="MSD02:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="MSD02:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="MSD02:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="MSD02:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="MSD02:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="MSD02:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPMSG" id="MSD02:TYPMSG" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="NUMVAR" id="MSD02:NUMVAR" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="DSCVAR" id="MSD02:DSCVAR" nullable="false" size="30"></column>
+    <column default=" " CIC="01" name="FRMCOB" id="MSD02:FRMCOB" nullable="false" size="30"></column>
+    <column default=" " CIC="01" name="PRVVAR" id="MSD02:PRVVAR" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NUMTBL" id="MSD02:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="ZONTBL" id="MSD02:ZONTBL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="NOMFIC" id="MSD02:NOMFIC" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="NUMCLE" id="MSD02:NUMCLE" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="ZONFIC" id="MSD02:ZONFIC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="OPTFRM" id="MSD02:OPTFRM" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="VARDEV" id="MSD02:VARDEV" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="SWINUL" id="MSD02:SWINUL" nullable="false" size="01"></column>
+    <column CIC="02" name="AUTSIG" id="MSD02:AUTSIG" nullable="true" size="01"></column>
+    <column CIC="02" name="AUTFIN" id="MSD02:AUTFIN" nullable="true" size="01"></column>
+    <column CIC="02" name="XMLTAG" id="MSD02:XMLTAG" nullable="true" size="30"></column>
+  </table>
+</member>
+

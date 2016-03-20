@@ -1,0 +1,62 @@
+<member type="13">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="CWD20" instance="CWD20" mandatory="false" multiple="true">
+    <key name="NOMMAC" mapping="[:nommbr]" id="CWD20:NOMMAC" nullable="false"></key>
+    <key name="TYPMAC" id="CWD20:TYPMAC" nullable="false"></key>
+    <column CIC="22" name="NUMVER" id="CWD20:NUMVER" type="Integer" nullable="true"></column>
+    <column CIC="22" name="REFMAJ" id="CWD20:REFMAJ" nullable="true" size="16"></column>
+    <column CIC="22" name="DATCRT" id="CWD20:DATCRT" nullable="true" size="08"></column>
+    <column CIC="22" name="DATMAJ" id="CWD20:DATMAJ" nullable="true" size="08"></column>
+    <column CIC="22" name="HEUMAJ" id="CWD20:HEUMAJ" nullable="true" size="08"></column>
+    <column CIC="22" name="USRMAJ" id="CWD20:USRMAJ" nullable="true" size="03"></column>
+    <column CIC="22" name="PGMMAJ" id="CWD20:PGMMAJ" nullable="true" size="06"></column>
+    <column CIC="22" name="STAANN" id="CWD20:STAANN" nullable="true" size="01"></column>
+    <column default=" " CIC="01" name="NOMMAC" id="CWD20:NOMMAC" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPMAC" id="CWD20:TYPMAC" nullable="false" size="01"></column>
+    <column CIC="42" name="DESMAC" id="CWD20:DESMAC" nullable="true" size="35"></column>
+    <column CIC="01" name="NBRPAR" id="CWD20:NBRPAR" type="Integer" nullable="true"></column>
+    <column default=" " CIC="01" name="REFTEX" id="CWD20:REFTEX" nullable="false" size="16"></column>
+    <table name="CWD20M" instance="CWD20M" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[CWD20:REFTEX]" id="CWD20M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="CWD20M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="CWD20M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="CWD20M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="CWD20M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="CWD20M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="CWD20M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="CWD20M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="CWD20M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="CWD20M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="CWD20M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="CWD20M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+</member>
+

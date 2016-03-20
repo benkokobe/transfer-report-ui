@@ -1,0 +1,7 @@
+.class
+target/*
+.project
+/target/
+.classpath
+*.class
+.metadata/*

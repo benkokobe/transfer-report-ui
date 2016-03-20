@@ -1,0 +1,242 @@
+<member multicompany="true" type="0X" companies="1" order="O">
+  <table name="YAD01" instance="YAD01" mandatory="true" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="FCD46" instance="FCD46" mandatory="false" multiple="false">
+    <key name="TYPRUL" mapping="[:nommbr]" id="FCD46:TYPRUL" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="FCD46:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="FCD46:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="FCD46:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="FCD46:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="FCD46:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="FCD46:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="FCD46:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="FCD46:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPRUL" id="FCD46:TYPRUL" nullable="false" size="04"></column>
+    <column default=" " CIC="41" name="LIBRUL_1" id="FCD46:LIBRUL_1" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBRUL_2" id="FCD46:LIBRUL_2" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBRUL_3" id="FCD46:LIBRUL_3" nullable="false" size="35"></column>
+    <column default=" " CIC="41" name="LIBRUL_4" id="FCD46:LIBRUL_4" nullable="false" size="35"></column>
+    <column default=" " CIC="01" name="SWITIM" id="FCD46:SWITIM" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIMUL" id="FCD46:SWIMUL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNI" id="FCD46:SWIUNI" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_OUT" id="FCD46:SWIUNC_ATT_OUT" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDEL_PHY" id="FCD46:SWIDEL_PHY" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_1" id="FCD46:TYPDON_CRI_1" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_2" id="FCD46:TYPDON_CRI_2" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_3" id="FCD46:TYPDON_CRI_3" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_4" id="FCD46:TYPDON_CRI_4" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_5" id="FCD46:TYPDON_CRI_5" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_6" id="FCD46:TYPDON_CRI_6" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_7" id="FCD46:TYPDON_CRI_7" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_8" id="FCD46:TYPDON_CRI_8" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_9" id="FCD46:TYPDON_CRI_9" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_CRI_10" id="FCD46:TYPDON_CRI_10" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_1" id="FCD46:NUMTBL_CRI_1" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_2" id="FCD46:NUMTBL_CRI_2" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_3" id="FCD46:NUMTBL_CRI_3" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_4" id="FCD46:NUMTBL_CRI_4" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_5" id="FCD46:NUMTBL_CRI_5" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_6" id="FCD46:NUMTBL_CRI_6" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_7" id="FCD46:NUMTBL_CRI_7" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_8" id="FCD46:NUMTBL_CRI_8" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_9" id="FCD46:NUMTBL_CRI_9" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_CRI_10" id="FCD46:NUMTBL_CRI_10" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_1" id="FCD46:SWIOBL_CRI_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_2" id="FCD46:SWIOBL_CRI_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_3" id="FCD46:SWIOBL_CRI_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_4" id="FCD46:SWIOBL_CRI_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_5" id="FCD46:SWIOBL_CRI_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_6" id="FCD46:SWIOBL_CRI_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_7" id="FCD46:SWIOBL_CRI_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_8" id="FCD46:SWIOBL_CRI_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_9" id="FCD46:SWIOBL_CRI_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_CRI_10" id="FCD46:SWIOBL_CRI_10" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="PRPCRI_1" id="FCD46:PRPCRI_1" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_2" id="FCD46:PRPCRI_2" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_3" id="FCD46:PRPCRI_3" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_4" id="FCD46:PRPCRI_4" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_5" id="FCD46:PRPCRI_5" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_6" id="FCD46:PRPCRI_6" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_7" id="FCD46:PRPCRI_7" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_8" id="FCD46:PRPCRI_8" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_9" id="FCD46:PRPCRI_9" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPCRI_10" id="FCD46:PRPCRI_10" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_1" id="FCD46:SWIENH_CRI_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_2" id="FCD46:SWIENH_CRI_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_3" id="FCD46:SWIENH_CRI_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_4" id="FCD46:SWIENH_CRI_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_5" id="FCD46:SWIENH_CRI_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_6" id="FCD46:SWIENH_CRI_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_7" id="FCD46:SWIENH_CRI_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_8" id="FCD46:SWIENH_CRI_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_9" id="FCD46:SWIENH_CRI_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_CRI_10" id="FCD46:SWIENH_CRI_10" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_1" id="FCD46:PRPENH_CRI_1" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_2" id="FCD46:PRPENH_CRI_2" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_3" id="FCD46:PRPENH_CRI_3" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_4" id="FCD46:PRPENH_CRI_4" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_5" id="FCD46:PRPENH_CRI_5" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_6" id="FCD46:PRPENH_CRI_6" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_7" id="FCD46:PRPENH_CRI_7" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_8" id="FCD46:PRPENH_CRI_8" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_9" id="FCD46:PRPENH_CRI_9" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_CRI_10" id="FCD46:PRPENH_CRI_10" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_1" id="FCD46:SWIDSP_CRI_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_2" id="FCD46:SWIDSP_CRI_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_3" id="FCD46:SWIDSP_CRI_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_4" id="FCD46:SWIDSP_CRI_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_5" id="FCD46:SWIDSP_CRI_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_6" id="FCD46:SWIDSP_CRI_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_7" id="FCD46:SWIDSP_CRI_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_8" id="FCD46:SWIDSP_CRI_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_9" id="FCD46:SWIDSP_CRI_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_CRI_10" id="FCD46:SWIDSP_CRI_10" nullable="false" size="01"></column>
+    <column default="0" CIC="01" name="LENCRI_1" id="FCD46:LENCRI_1" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_2" id="FCD46:LENCRI_2" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_3" id="FCD46:LENCRI_3" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_4" id="FCD46:LENCRI_4" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_5" id="FCD46:LENCRI_5" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_6" id="FCD46:LENCRI_6" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_7" id="FCD46:LENCRI_7" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_8" id="FCD46:LENCRI_8" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_9" id="FCD46:LENCRI_9" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENCRI_10" id="FCD46:LENCRI_10" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_1" id="FCD46:SWIHIE_CRI_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_2" id="FCD46:SWIHIE_CRI_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_3" id="FCD46:SWIHIE_CRI_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_4" id="FCD46:SWIHIE_CRI_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_5" id="FCD46:SWIHIE_CRI_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_6" id="FCD46:SWIHIE_CRI_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_7" id="FCD46:SWIHIE_CRI_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_8" id="FCD46:SWIHIE_CRI_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_9" id="FCD46:SWIHIE_CRI_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIHIE_CRI_10" id="FCD46:SWIHIE_CRI_10" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_1" id="FCD46:TYPDON_ATT_1" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_2" id="FCD46:TYPDON_ATT_2" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_3" id="FCD46:TYPDON_ATT_3" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_4" id="FCD46:TYPDON_ATT_4" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_5" id="FCD46:TYPDON_ATT_5" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_6" id="FCD46:TYPDON_ATT_6" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_7" id="FCD46:TYPDON_ATT_7" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_8" id="FCD46:TYPDON_ATT_8" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_9" id="FCD46:TYPDON_ATT_9" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="TYPDON_ATT_10" id="FCD46:TYPDON_ATT_10" nullable="false" size="02"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_1" id="FCD46:NUMSEQ_CPL_1" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_2" id="FCD46:NUMSEQ_CPL_2" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_3" id="FCD46:NUMSEQ_CPL_3" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_4" id="FCD46:NUMSEQ_CPL_4" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_5" id="FCD46:NUMSEQ_CPL_5" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_6" id="FCD46:NUMSEQ_CPL_6" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_7" id="FCD46:NUMSEQ_CPL_7" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_8" id="FCD46:NUMSEQ_CPL_8" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_9" id="FCD46:NUMSEQ_CPL_9" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="NUMSEQ_CPL_10" id="FCD46:NUMSEQ_CPL_10" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_1" id="FCD46:NUMTBL_ATT_1" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_2" id="FCD46:NUMTBL_ATT_2" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_3" id="FCD46:NUMTBL_ATT_3" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_4" id="FCD46:NUMTBL_ATT_4" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_5" id="FCD46:NUMTBL_ATT_5" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_6" id="FCD46:NUMTBL_ATT_6" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_7" id="FCD46:NUMTBL_ATT_7" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_8" id="FCD46:NUMTBL_ATT_8" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_9" id="FCD46:NUMTBL_ATT_9" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="NUMTBL_ATT_10" id="FCD46:NUMTBL_ATT_10" nullable="false" size="03"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_1" id="FCD46:SWIOBL_ATT_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_2" id="FCD46:SWIOBL_ATT_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_3" id="FCD46:SWIOBL_ATT_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_4" id="FCD46:SWIOBL_ATT_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_5" id="FCD46:SWIOBL_ATT_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_6" id="FCD46:SWIOBL_ATT_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_7" id="FCD46:SWIOBL_ATT_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_8" id="FCD46:SWIOBL_ATT_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_9" id="FCD46:SWIOBL_ATT_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIOBL_ATT_10" id="FCD46:SWIOBL_ATT_10" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="PRPATT_1" id="FCD46:PRPATT_1" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_2" id="FCD46:PRPATT_2" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_3" id="FCD46:PRPATT_3" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_4" id="FCD46:PRPATT_4" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_5" id="FCD46:PRPATT_5" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_6" id="FCD46:PRPATT_6" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_7" id="FCD46:PRPATT_7" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_8" id="FCD46:PRPATT_8" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_9" id="FCD46:PRPATT_9" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPATT_10" id="FCD46:PRPATT_10" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_1" id="FCD46:SWIDSP_ATT_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_2" id="FCD46:SWIDSP_ATT_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_3" id="FCD46:SWIDSP_ATT_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_4" id="FCD46:SWIDSP_ATT_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_5" id="FCD46:SWIDSP_ATT_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_6" id="FCD46:SWIDSP_ATT_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_7" id="FCD46:SWIDSP_ATT_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_8" id="FCD46:SWIDSP_ATT_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_9" id="FCD46:SWIDSP_ATT_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIDSP_ATT_10" id="FCD46:SWIDSP_ATT_10" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_1" id="FCD46:SWIENH_ATT_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_2" id="FCD46:SWIENH_ATT_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_3" id="FCD46:SWIENH_ATT_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_4" id="FCD46:SWIENH_ATT_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_5" id="FCD46:SWIENH_ATT_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_6" id="FCD46:SWIENH_ATT_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_7" id="FCD46:SWIENH_ATT_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_8" id="FCD46:SWIENH_ATT_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_9" id="FCD46:SWIENH_ATT_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIENH_ATT_10" id="FCD46:SWIENH_ATT_10" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_1" id="FCD46:PRPENH_ATT_1" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_2" id="FCD46:PRPENH_ATT_2" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_3" id="FCD46:PRPENH_ATT_3" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_4" id="FCD46:PRPENH_ATT_4" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_5" id="FCD46:PRPENH_ATT_5" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_6" id="FCD46:PRPENH_ATT_6" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_7" id="FCD46:PRPENH_ATT_7" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_8" id="FCD46:PRPENH_ATT_8" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_9" id="FCD46:PRPENH_ATT_9" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="PRPENH_ATT_10" id="FCD46:PRPENH_ATT_10" nullable="false" size="06"></column>
+    <column default="0" CIC="01" name="LENATT_1" id="FCD46:LENATT_1" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_2" id="FCD46:LENATT_2" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_3" id="FCD46:LENATT_3" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_4" id="FCD46:LENATT_4" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_5" id="FCD46:LENATT_5" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_6" id="FCD46:LENATT_6" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_7" id="FCD46:LENATT_7" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_8" id="FCD46:LENATT_8" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_9" id="FCD46:LENATT_9" type="Integer" nullable="false"></column>
+    <column default="0" CIC="01" name="LENATT_10" id="FCD46:LENATT_10" type="Integer" nullable="false"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_1" id="FCD46:SWIUNC_ATT_1" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_2" id="FCD46:SWIUNC_ATT_2" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_3" id="FCD46:SWIUNC_ATT_3" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_4" id="FCD46:SWIUNC_ATT_4" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_5" id="FCD46:SWIUNC_ATT_5" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_6" id="FCD46:SWIUNC_ATT_6" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_7" id="FCD46:SWIUNC_ATT_7" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_8" id="FCD46:SWIUNC_ATT_8" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_9" id="FCD46:SWIUNC_ATT_9" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="SWIUNC_ATT_10" id="FCD46:SWIUNC_ATT_10" nullable="false" size="01"></column>
+  </table>
+</member>
+

@@ -1,0 +1,17 @@
+<member type="08" dictionnary="false">
+  <table name="CWD23" instance="CWD23" mandatory="false" multiple="true">
+    <key name="NOMPJ2" mapping="[:nommbr]" id="CWD23:NOMPJ2" nullable="false"></key>
+    <key name="NOMPJ3" id="CWD23:NOMPJ3" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="CWD23:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="CWD23:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="CWD23:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="CWD23:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="CWD23:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="CWD23:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="CWD23:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="CWD23:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMPJ2" id="CWD23:NOMPJ2" nullable="false" size="06"></column>
+    <column default=" " CIC="01" name="NOMPJ3" id="CWD23:NOMPJ3" nullable="false" size="05"></column>
+  </table>
+</member>
+

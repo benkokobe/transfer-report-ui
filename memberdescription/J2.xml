@@ -1,0 +1,112 @@
+<member multicompany="true" type="J2" companies="1">
+  <table name="YAD01" instance="YAD01" mandatory="false" multiple="false">
+    <key name="NOMMBR" mapping="[:nommbr]" id="YAD01:NOMMBR" nullable="false"></key>
+    <key name="NOMGRP" id="YAD01:NOMGRP" nullable="false"></key>
+    <key name="TYPMBR" mapping="[:typmbr]" id="YAD01:TYPMBR" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="YAD01:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="YAD01:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="YAD01:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="YAD01:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="YAD01:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="YAD01:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="YAD01:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="YAD01:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMBR" id="YAD01:NOMMBR" nullable="false" size="256"></column>
+    <column default=" " CIC="01" name="NOMGRP" id="YAD01:NOMGRP" nullable="false" size="05"></column>
+    <column default=" " CIC="01" name="TYPMBR" id="YAD01:TYPMBR" nullable="false" size="02"></column>
+    <column default=" " CIC="01" name="SRCPAT" id="YAD01:SRCPAT" nullable="false" size="200"></column>
+    <column default=" " CIC="01" name="TYPROU" id="YAD01:TYPROU" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="NOMMDL" id="YAD01:NOMMDL" nullable="false" size="04"></column>
+    <column default=" " CIC="01" name="REFTEX" id="YAD01:REFTEX" nullable="false" size="16"></column>
+    <column default=" " CIC="01" name="SWICHK" id="YAD01:SWICHK" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL" id="YAD01:TYPTBL" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="CHPDOC" id="YAD01:CHPDOC" nullable="false" size="15"></column>
+    <column default=" " CIC="01" name="DATTFT" id="YAD01:DATTFT" nullable="false" size="08"></column>
+    <column default=" " CIC="01" name="TYPTBL_ENV" id="YAD01:TYPTBL_ENV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="TYPTBL_INV" id="YAD01:TYPTBL_INV" nullable="false" size="01"></column>
+    <column default=" " CIC="01" name="APPPRD" id="YAD01:APPPRD" nullable="false" size="02"></column>
+    <column default=" " CIC="05" name="APPPRD_PRJ" id="YAD01:APPPRD_PRJ" nullable="false" size="02"></column>
+  </table>
+  <table name="TAD11" instance="TAD11" mandatory="false" multiple="true">
+    <key name="CODSOC" id="TAD11:CODSOC" nullable="false"></key>
+    <key name="NUMTBL" mapping="[:nommbr]::(.*)/.*" id="TAD11:NUMTBL" nullable="false"></key>
+    <key name="ARGTBL" mapping="[:nommbr]::.*/(.*)" id="TAD11:ARGTBL" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="TAD11:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="22" name="REFMAJ" id="TAD11:REFMAJ" nullable="false" size="16"></column>
+    <column default=" " CIC="22" name="DATCRT" id="TAD11:DATCRT" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="DATMAJ" id="TAD11:DATMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="HEUMAJ" id="TAD11:HEUMAJ" nullable="false" size="08"></column>
+    <column default=" " CIC="22" name="USRMAJ" id="TAD11:USRMAJ" nullable="false" size="03"></column>
+    <column default=" " CIC="22" name="PGMMAJ" id="TAD11:PGMMAJ" nullable="false" size="06"></column>
+    <column default=" " CIC="22" name="STAANN" id="TAD11:STAANN" nullable="false" size="01"></column>
+    <column default=" " CIC="21" name="NUMTBL" id="TAD11:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="21" name="ARGTBL" id="TAD11:ARGTBL" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="CODSOC" id="TAD11:CODSOC" nullable="false" size="30"></column>
+    <column CIC="21" name="REFMEM" id="TAD11:REFMEM" nullable="true" size="16"></column>
+    <table name="TAD11M" instance="TAD11M" mandatory="false" multiple="false">
+      <key name="REFTEX" mapping="[TAD11:REFMEM]" id="TAD11M:REFTEX" nullable="false"></key>
+      <column default="0" CIC="22" name="NUMVER" id="TAD11M:NUMVER" type="Integer" nullable="false"></column>
+      <column default=" " CIC="22" name="REFMAJ" id="TAD11M:REFMAJ" nullable="false" size="16"></column>
+      <column default=" " CIC="22" name="DATCRT" id="TAD11M:DATCRT" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="DATMAJ" id="TAD11M:DATMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="HEUMAJ" id="TAD11M:HEUMAJ" nullable="false" size="08"></column>
+      <column default=" " CIC="22" name="USRMAJ" id="TAD11M:USRMAJ" nullable="false" size="03"></column>
+      <column default=" " CIC="22" name="PGMMAJ" id="TAD11M:PGMMAJ" nullable="false" size="06"></column>
+      <column default=" " CIC="22" name="STAANN" id="TAD11M:STAANN" nullable="false" size="01"></column>
+      <column default=" " CIC="43" name="REFTEX" id="TAD11M:REFTEX" nullable="false" size="16"></column>
+      <column default="0" CIC="43" name="CPTMEM" id="TAD11M:CPTMEM" type="Integer" nullable="false"></column>
+      <column default=" " CIC="43" name="TEXMEM" id="TAD11M:TEXMEM" nullable="false" size="3000"></column>
+    </table>
+  </table>
+  <table name="TAD12" instance="TAD12" mandatory="false" multiple="true">
+    <key name="CODSOC" id="TAD12:CODSOC" nullable="false"></key>
+    <key name="NUMTBL" mapping="[:nommbr]::(.*)/.*" id="TAD12:NUMTBL" nullable="false"></key>
+    <key name="ARGTBL" mapping="[:nommbr]::.*/(.*)" id="TAD12:ARGTBL" nullable="false"></key>
+    <key name="CODLAN" id="TAD12:CODLAN" nullable="false"></key>
+    <key name="NOMJAV" id="TAD12:NOMJAV" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="TAD12:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="21" name="NUMTBL" id="TAD12:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="21" name="ARGTBL" id="TAD12:ARGTBL" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="CODLAN" id="TAD12:CODLAN" nullable="false" size="03"></column>
+    <column default=" " CIC="21" name="CODSOC" id="TAD12:CODSOC" nullable="false" size="30"></column>
+    <column default=" " CIC="21" name="NOMJAV" id="TAD12:NOMJAV" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="ATTVAL" id="TAD12:ATTVAL" nullable="false" size="64"></column>
+  </table>
+  <table name="TAD13" instance="TAD13" mandatory="false" multiple="true">
+    <key name="CODSOC" id="TAD13:CODSOC" nullable="false"></key>
+    <key name="NUMTBL" mapping="[:nommbr]::(.*)/.*" id="TAD13:NUMTBL" nullable="false"></key>
+    <key name="ARGTBL" mapping="[:nommbr]::.*/(.*)" id="TAD13:ARGTBL" nullable="false"></key>
+    <key name="NOMJAV" id="TAD13:NOMJAV" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="TAD13:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="21" name="NUMTBL" id="TAD13:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="21" name="ARGTBL" id="TAD13:ARGTBL" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="CODSOC" id="TAD13:CODSOC" nullable="false" size="30"></column>
+    <column default=" " CIC="21" name="NOMJAV" id="TAD13:NOMJAV" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="ATTVAL" id="TAD13:ATTVAL" nullable="false" size="40"></column>
+  </table>
+  <table name="TAD14" instance="TAD14" mandatory="false" multiple="true">
+    <key name="CODSOC" id="TAD14:CODSOC" nullable="false"></key>
+    <key name="NUMTBL" mapping="[:nommbr]::(.*)/.*" id="TAD14:NUMTBL" nullable="false"></key>
+    <key name="ARGTBL" mapping="[:nommbr]::.*/(.*)" id="TAD14:ARGTBL" nullable="false"></key>
+    <key name="NOMJAV" id="TAD14:NOMJAV" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="TAD14:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="21" name="NUMTBL" id="TAD14:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="21" name="ARGTBL" id="TAD14:ARGTBL" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="CODSOC" id="TAD14:CODSOC" nullable="false" size="30"></column>
+    <column default=" " CIC="21" name="NOMJAV" id="TAD14:NOMJAV" nullable="false" size="64"></column>
+    <column default="0" CIC="21" name="ATTVAL" id="TAD14:ATTVAL" type="Integer" nullable="false"></column>
+  </table>
+  <table name="TAD15" instance="TAD15" mandatory="false" multiple="true">
+    <key name="CODSOC" id="TAD15:CODSOC" nullable="false"></key>
+    <key name="NUMTBL" mapping="[:nommbr]::(.*)/.*" id="TAD15:NUMTBL" nullable="false"></key>
+    <key name="ARGTBL" mapping="[:nommbr]::.*/(.*)" id="TAD15:ARGTBL" nullable="false"></key>
+    <key name="NOMJAV" id="TAD15:NOMJAV" nullable="false"></key>
+    <column default="0" CIC="22" name="NUMVER" id="TAD15:NUMVER" type="Integer" nullable="false"></column>
+    <column default=" " CIC="21" name="NUMTBL" id="TAD15:NUMTBL" nullable="false" size="03"></column>
+    <column default=" " CIC="21" name="ARGTBL" id="TAD15:ARGTBL" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="CODSOC" id="TAD15:CODSOC" nullable="false" size="30"></column>
+    <column default=" " CIC="21" name="NOMJAV" id="TAD15:NOMJAV" nullable="false" size="64"></column>
+    <column default=" " CIC="21" name="ATTVAL" id="TAD15:ATTVAL" nullable="false" size="01"></column>
+  </table>
+</member>
+
