@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import com.bko.domain.DeploymentRequest;
 import com.bko.domain.Patch;
 import com.jcabi.ssh.*;
 import com.jcabi.ssh.SSH;
@@ -94,6 +95,50 @@ public class Shell {
 	    session.setConfig("PreferredAuthentications", "publickey,keyboard-interactive,password");
 	    session.connect();
 	}
+	public void setDeploymentRequestInfo(DeploymentRequest deploymentRequest) throws JSchException, IOException{
+		channel = session.openChannel("exec");
+		channel_exec = (ChannelExec) channel;
+		String profile = "source $HOME/.profile;";
+		//problem_synopsis
+		String drName = deploymentRequest.getDrName();
+		String query = "ccm query \"problem_type='dr' and dr_name = '"
+				+ drName 
+				+ "'"
+				+ "\" "
+				+ "                      -u -f \"%source_environment|%destination_environment|%problem_synopsis";
+		
+		
+		String complete_command = profile + query;
+		System.out.println("query:" + query);
+		channel_exec.setCommand(complete_command);
+		channel_exec.setErrStream(System.err);
+		
+		channel_exec.connect();
+
+	    BufferedReader reader = new BufferedReader(new InputStreamReader(channel_exec.getInputStream()));
+	    String line;
+	    int j =0;
+	    //SynergyObject synergyObject;
+	    
+	    while ((line = reader.readLine()) != null) {
+	    	
+	    	String[] tokens = line.split("\\|");
+
+	    	System.out.print("Source Env:" + tokens[0]);
+	    	System.out.print("Destination Env:" + tokens[1]);
+	    	System.out.println("Synopsis:" + tokens[2]);
+	    	deploymentRequest.setEnvSrc(tokens[0]);
+	    	deploymentRequest.setEnvDst(tokens[1]);
+	    	deploymentRequest.setSynopsis(tokens[2]);
+
+	    }
+
+	    channel_exec.disconnect();
+	    //session.disconnect();
+
+	    System.out.println("Exit code: " + channel_exec.getExitStatus());
+		
+	}
 	public List<Patch>  execute_query_patch_list(String drName) throws JSchException, IOException{
 		
         patchList = new ArrayList<Patch>();
@@ -138,7 +183,7 @@ public class Shell {
 	    	System.out.println("Object: " + p.getPatchId());
 	    }
 
-	    channel_exec.disconnect();
+	    //channel_exec.disconnect();
 	    //session.disconnect();
 
 	    System.out.println("Exit code: " + channel_exec.getExitStatus());
@@ -201,7 +246,7 @@ public class Shell {
 	    	System.out.println("Object: " + obj.getObject());
 	    }
 
-	    channel_exec.disconnect();
+	    //channel_exec.disconnect();
 	    //session.disconnect();
 
 	    System.out.println("Exit code: " + channel_exec.getExitStatus());

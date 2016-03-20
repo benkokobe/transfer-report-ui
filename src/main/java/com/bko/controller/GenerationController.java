@@ -19,11 +19,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bko.domain.DeploymentRequest;
 import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
-<<<<<<< HEAD
 import com.bko.viewresolver.util.Shell;
 import com.jcraft.jsch.JSchException;
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 
 /**
  * Handles requests for the application home page.
@@ -45,7 +42,6 @@ public class GenerationController {
     @Value("${spring.datasource.url}")
     private String db_url;
     
-<<<<<<< HEAD
     @Value("${env.name.host}")
     private String host_name;
     
@@ -62,13 +58,9 @@ public class GenerationController {
     private String ssh_key_pass;
     
     private Shell shell;
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
-    
     
     private DeploymentRequest deploymentRequest;
     
-<<<<<<< HEAD
     public void initialize_controller() throws JSchException{
     	
     	this.deploymentRequest = new DeploymentRequest();
@@ -118,17 +110,12 @@ public class GenerationController {
     
 	@RequestMapping(method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws JSchException {
-=======
-	@RequestMapping(method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
 		String formattedDate = dateFormat.format(date);
-<<<<<<< HEAD
 		
 		initialize_controller();
 		//set_DR();
@@ -136,11 +123,9 @@ public class GenerationController {
 		//this.deploymentRequest.setDrName(deploymentRequestName);
 		model.addAttribute("deploymentRequest", this.deploymentRequest);
 		model.addAttribute("shell", this.shell);
-=======
 		this.deploymentRequest = new DeploymentRequest();
 		//this.deploymentRequest.setDrName(deploymentRequestName);
 		model.addAttribute("deploymentRequest", this.deploymentRequest);
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		logger.info("env_name:" + env_name);
 		model.addAttribute("env_name", env_name );
 		model.addAttribute("db_url", db_url );
@@ -149,13 +134,10 @@ public class GenerationController {
 	}
 	@RequestMapping(method = RequestMethod.POST)
     public String submitForm(@ModelAttribute("deploymentRequest")
-<<<<<<< HEAD
     DeploymentRequest deploymentRequest, BindingResult result, Model model) throws JSchException {
 		
 		
 		set_DR(deploymentRequest);
-=======
-    DeploymentRequest deploymentRequest, BindingResult result, Model model) {
 		
 		String deploymentRequestName = deploymentRequest.getDrName();
 		//this.deploymentRequest = new DeploymentRequest();
@@ -166,31 +148,23 @@ public class GenerationController {
 		deploymentRequest.setNumberOfTransferOperations(deploymentRequestService.getnumberOfTransferOperations(deploymentRequestName));
 		deploymentRequest.setNumberOfManualTransferOperations(deploymentRequestService.getNumberOfManualTransferOperations(deploymentRequestName));
 		deploymentRequest.setNumberOfSubjects(deploymentRequestService.getNumberOfSubjects(deploymentRequestName));
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		
 		logger.info("getNumberOfPatches: " + deploymentRequest.getNumberOfPatches());
 		
 		model.addAttribute("env_name", env_name );
 		model.addAttribute("db_url", db_url );
 		
-<<<<<<< HEAD
 		
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		return "DRdetails";
 	}
 	//@RequestMapping(value="generate*", method = RequestMethod.GET)
 	@RequestMapping(value= "/*", method = RequestMethod.GET)
 	public String submitForm(@RequestParam(required = true, value = "drName") String deploymentRequestName, 
-<<<<<<< HEAD
 			Model model) throws JSchException {
 		
 		
 		set_DR(deploymentRequestName);
 		
-		
-=======
-			Model model) {
 		
 		this.deploymentRequest = new DeploymentRequest();
 		this.deploymentRequest.setDrName(deploymentRequestName);
@@ -198,15 +172,11 @@ public class GenerationController {
 		this.deploymentRequest.setNumberOfPatches(deploymentRequestService.getNumberOfPatches(deploymentRequestName));
 		this.deploymentRequest.setNumberOfTransferOperations(deploymentRequestService.getnumberOfTransferOperations(deploymentRequestName));
 
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		logger.info("To generate an excel document:" + deploymentRequestName);
 		logger.info("Dr nbr of patches:" + deploymentRequest.getNumberOfPatches());
 		
 		model.addAttribute("deploymentRequest",this.deploymentRequest);
-<<<<<<< HEAD
 		model.addAttribute("shell", this.shell);
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		return "DRSummary";
 		
 	}

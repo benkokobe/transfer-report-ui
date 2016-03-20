@@ -54,4 +54,8 @@ public class DeploymentRequestSynergy {
 		this.deploymentRequest.setPatchList(patchList);
 		
 	}
+	public void setDeploymentRequestInfo(DeploymentRequest deploymentRequest) throws JSchException, IOException{
+		this.shell.setDeploymentRequestInfo(deploymentRequest);
+		
+	}
 }

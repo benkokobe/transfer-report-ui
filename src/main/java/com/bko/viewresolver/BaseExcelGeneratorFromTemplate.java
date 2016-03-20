@@ -124,10 +124,11 @@ public class BaseExcelGeneratorFromTemplate {
 		
 		this.deploymentRequest.setDeploymentRequestTransferOperation(
 				    this.deploymentRequestService.getTransferOperation(drName));
-		this.deploymentRequest.setSynopsis(deploymentRequestService.getSynopsis(drName));
-		this.deploymentRequest.setEnvSrc(this.deploymentRequestService.getEnvSrc(drName));
-		this.deploymentRequest.setEnvDst(this.deploymentRequestService.getEnvDst(drName));
+		//this.deploymentRequest.setSynopsis(deploymentRequestService.getSynopsis(drName));
+		//this.deploymentRequest.setEnvSrc(this.deploymentRequestService.getEnvSrc(drName));
+		//this.deploymentRequest.setEnvDst(this.deploymentRequestService.getEnvDst(drName));
 		this.deploymentRequest.setPatchMembersList(this.deploymentRequestService.getDRMembers(drName));
+		this.deploymentRequestSynergy.setDeploymentRequestInfo(this.deploymentRequest);
 		
 		//this.deploymentRequest.setObjectList(this.deploymentRequestService.get);
 		

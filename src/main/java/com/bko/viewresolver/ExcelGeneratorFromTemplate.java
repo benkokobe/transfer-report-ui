@@ -3,11 +3,8 @@ package com.bko.viewresolver;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-<<<<<<< HEAD
 import java.io.IOException;
 import java.util.ArrayList;
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 import java.util.List;
 import java.util.Map;
 
@@ -31,22 +28,15 @@ import org.springframework.web.servlet.view.document.AbstractExcelView;
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 import com.bko.domain.DeploymentRequest;
 import com.bko.domain.DeploymentRequestTransferOperation;
 import com.bko.domain.Patch;
 import com.bko.domain.PatchMember;
 import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
-<<<<<<< HEAD
 import com.bko.viewresolver.util.Shell;
 import com.bko.viewresolver.util.SynergyObject;
 import com.jcraft.jsch.JSchException;
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 
 
 @Component
@@ -77,13 +67,9 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 	private FileOutputStream generatedFile;
 	
 	
-<<<<<<< HEAD
 	private Row rowPatchList, rowPatchMembersList, rowTransferOperationList, rowObjectList, row4,row5;
 	
 	private Shell shell;
-=======
-	private Row rowPatchList, rowPatchMembersList, rowTransferOperationList, row4,row5;
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 	
 	private Sheet patchListSheetTab;
 	private Cell columnPatchListDRname;
@@ -101,7 +87,6 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 	private XSSFSheet transferOperationsSheetTab;
 	private XSSFSheet summaryTab;
 	
-<<<<<<< HEAD
 	private XSSFSheet objectListTab;
 	private Cell columnObjectListTask;
 	private Cell columnObjectListObject;
@@ -110,8 +95,6 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 	private Cell columnObjectListInstance;
 	
 	
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 	private Cell cell_31;
 	private Cell cell_32;
 	private Cell cell_33;
@@ -138,11 +121,8 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 		// TODO Auto-generated method stub
 		
 		this.deploymentRequest = (DeploymentRequest) model.get("deploymentRequest");
-<<<<<<< HEAD
 		this.shell             = (Shell) model.get("shell");
 		
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		this.patchList = this.deploymentRequest.getPatchList();
 
 		this.deploymentRequest.setPatchList(patchList);
@@ -171,10 +151,7 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 		generatePtchList((XSSFWorkbook) wb);
 		generateDRMembers((XSSFWorkbook) wb);
 		generateTransferOp((XSSFWorkbook) wb);
-<<<<<<< HEAD
 		generateObjectList((XSSFWorkbook) wb);
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		//generateList(wb);
 		
 		wb.write(generatedFile);

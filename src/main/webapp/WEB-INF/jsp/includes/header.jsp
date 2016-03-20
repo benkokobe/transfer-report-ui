@@ -8,12 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
 	<title>RIC release report Generator</title>
-=======
-	<title>Up and running with Spring Framework quickly</title>
-
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 	<!-- Bootstrap -->
 	<link href="/public/lib/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -40,26 +35,17 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<<<<<<< HEAD
              
                 <ul class="nav navbar-nav navbar-left">
                     <li>
                         <a href="/">DR Generator (DB)</a>
-=======
-                <ul class="nav navbar-nav navbar-left">
-                    <li>
-                        <a href="/">DR Generator</a>
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
                     </li>
                     <li>
                         <a href="/formatter">Platform Env. Advanced report Formatter</a>
                     </li>
-<<<<<<< HEAD
                     <li>
                         <a href="/release/">Release Report Generator (Synergy)</a>
                     </li>
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
                 </ul>
                 
               
@@ -84,11 +70,4 @@
 		  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 		  <h3 class="bg-success"><em>${flashMessage}</em></h3>
 		</div>
-<<<<<<< HEAD
 	</c:if>
-=======
-	</c:if>
-
-
-
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5

@@ -2,11 +2,7 @@
 
 <div class="row">
                 <div class="col-lg-12">
-<<<<<<< HEAD
                     <p> &copy; RIC tools 2016</p>
-=======
-                    <p> &copy; 2015</p>
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
                 </div>
             </div>   
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

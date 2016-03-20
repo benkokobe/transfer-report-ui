@@ -24,7 +24,6 @@
 	</properties>
 
 	<dependencies>
-<<<<<<< HEAD
 		<!-- flattening related -->
 		<dependency>
 			<groupId>com.sopra.sdlc</groupId>
@@ -54,8 +53,6 @@
 			<artifactId>jcabi-ssh</artifactId>
 			<version>1.5</version>
 		</dependency>
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -128,14 +125,11 @@
 			<artifactId>scala-library</artifactId>
 			<version>2.10.4</version>
 		</dependency>
-<<<<<<< HEAD
-=======
 		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
 			<version>2.10.4</version>
 		</dependency>
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
 	</dependencies>
 
 	<build>
