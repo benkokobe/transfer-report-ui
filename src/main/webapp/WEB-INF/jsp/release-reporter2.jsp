@@ -1,17 +1,28 @@
 <%@include file="includes/header.jsp"%>
 
 
-<form:form  method="post" modelAttribute="deploymentRequest">
- <li>
-     <a>Enter the DR to generate release content</a>
-  </li>
-<div class="form-group">
-    <label for="drName">Enter DR Name:</label>
-    <form:input path="drName" class="form-control" placeholder="Enter DR name here"/>
+  
+  
+<div class="container">
+  <h2>Release content generator.</h2>
+  <!-- <form class="form-horizontal" role="form"> -->
+  <form:form class="form-horizontal"  method="post" modelAttribute="deploymentRequest">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="drName">DR Name:</label>
+      <div class="col-sm-4">          
+        <!-- <input type="password" class="form-control" id="pwd" placeholder="Enter password">-->
+        <form:input path="drName" class="form-control" placeholder="Enter DR name here"/>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-1">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  <!-- </form> -->
+  </form:form>
 </div>
+ 
 
-<div class="form-group">
-  <button type="submit" class="btn btn-default">Submit</button>
-  </div>
-</form:form>
+
 <%@include file="includes/footer.jsp"%>

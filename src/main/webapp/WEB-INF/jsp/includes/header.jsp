@@ -38,16 +38,9 @@
              
                 <ul class="nav navbar-nav navbar-left">
                     <li>
-                        <a href="/">DR Generator (DB)</a>
+                        <a href="/release/">Home</a>
                     </li>
-                    <li>
-                        <a href="/formatter">Platform Env. Advanced report Formatter</a>
-                    </li>
-                    <li>
-                        <a href="/release/">Release Report Generator (Synergy)</a>
-                    </li>
-                </ul>
-                
+                </ul>           
               
                 <ul class="nav navbar-nav navbar-right">
                     <li>
