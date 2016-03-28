@@ -38,7 +38,7 @@
              
                 <ul class="nav navbar-nav navbar-left">
                     <li>
-                        <a href="/release/">Home</a>
+                        <a href="/">Home</a>
                     </li>
                 </ul>           
               

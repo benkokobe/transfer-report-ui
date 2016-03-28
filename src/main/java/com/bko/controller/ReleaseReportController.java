@@ -22,7 +22,8 @@ import com.bko.service.PatchService;
 import com.jcraft.jsch.JSchException;
 
 @Controller
-@RequestMapping(value = "/release/")
+//@RequestMapping(value = "/release/")
+@RequestMapping(value = "/")
 public class ReleaseReportController extends BaseController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ReleaseReportController.class);
@@ -41,6 +42,7 @@ public class ReleaseReportController extends BaseController {
 
 		// this.deploymentRequest.setDrName(deploymentRequestName);
 		model.addAttribute("deploymentRequest", this.deploymentRequest);
+		this.deploymentRequest = new DeploymentRequest();
 		model.addAttribute("shell", this.shell);
 		logger.info("env_name:" + env_name);
 		model.addAttribute("env_name", env_name);
@@ -48,12 +50,37 @@ public class ReleaseReportController extends BaseController {
 
 		return "release-reporter2";
 	}
+//	@RequestMapping(method = RequestMethod.POST)
+//    public String submitForm(@ModelAttribute("deploymentRequest")
+//    DeploymentRequest deploymentRequest, BindingResult result, Model model) throws JSchException {
+//		
+//		
+//		set_DR(deploymentRequest);
+//		
+//		logger.info("getNumberOfPatches: " + deploymentRequest.getNumberOfPatches());
+//		
+//		model.addAttribute("env_name", env_name );
+//		model.addAttribute("db_url", db_url );
+//		
+//		
+//		return "DRdetails";
+//	}
 	@RequestMapping(method = RequestMethod.POST)
     public String submitForm(@ModelAttribute("deploymentRequest")
     DeploymentRequest deploymentRequest, BindingResult result, Model model) throws JSchException {
 		
 		
 		set_DR(deploymentRequest);
+		
+		String deploymentRequestName = deploymentRequest.getDrName();
+		//this.deploymentRequest = new DeploymentRequest();
+		
+		deploymentRequest.setPatchList(deploymentRequestService.getPatchList(deploymentRequestName));
+		deploymentRequest.setSynopsis(deploymentRequestService.getSynopsis(deploymentRequestName));
+		deploymentRequest.setNumberOfPatches(deploymentRequestService.getNumberOfPatches(deploymentRequestName));
+		deploymentRequest.setNumberOfTransferOperations(deploymentRequestService.getnumberOfTransferOperations(deploymentRequestName));
+		deploymentRequest.setNumberOfManualTransferOperations(deploymentRequestService.getNumberOfManualTransferOperations(deploymentRequestName));
+		deploymentRequest.setNumberOfSubjects(deploymentRequestService.getNumberOfSubjects(deploymentRequestName));
 		
 		logger.info("getNumberOfPatches: " + deploymentRequest.getNumberOfPatches());
 		
@@ -70,6 +97,12 @@ public class ReleaseReportController extends BaseController {
 			
 			
 			set_DR(deploymentRequestName);
+			
+			//this.deploymentRequest = new DeploymentRequest();
+			this.deploymentRequest.setDrName(deploymentRequestName);
+			this.deploymentRequest.setPatchList(deploymentRequestService.getPatchList(deploymentRequestName));
+			this.deploymentRequest.setNumberOfPatches(deploymentRequestService.getNumberOfPatches(deploymentRequestName));
+			this.deploymentRequest.setNumberOfTransferOperations(deploymentRequestService.getnumberOfTransferOperations(deploymentRequestName));
 			
 			
 			logger.info("To generate an excel document:" + deploymentRequestName);

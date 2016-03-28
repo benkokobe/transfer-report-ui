@@ -117,7 +117,6 @@ public class BaseExcelGeneratorFromTemplate {
 		this.deploymentRequestMemberTypes.setDeploymentRequest(this.deploymentRequest);;
 		this.deploymentRequestSynergy.setShell(shell);
 		this.deploymentRequestSynergy.getObjectsLinkedToDr();
-		this.deploymentRequestMemberTypes.generatePatchMemberTypes();
 		
 		this.deploymentRequestSynergy.getPatchList();
 		
@@ -128,6 +127,7 @@ public class BaseExcelGeneratorFromTemplate {
 		//this.deploymentRequest.setEnvSrc(this.deploymentRequestService.getEnvSrc(drName));
 		//this.deploymentRequest.setEnvDst(this.deploymentRequestService.getEnvDst(drName));
 		this.deploymentRequest.setPatchMembersList(this.deploymentRequestService.getDRMembers(drName));
+		this.deploymentRequestMemberTypes.generatePatchMemberTypes();
 		this.deploymentRequestSynergy.setDeploymentRequestInfo(this.deploymentRequest);
 		
 		//this.deploymentRequest.setObjectList(this.deploymentRequestService.get);

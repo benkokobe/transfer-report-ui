@@ -25,8 +25,8 @@ import com.jcraft.jsch.JSchException;
 /**
  * Handles requests for the application home page.
  */
-@Controller
-@RequestMapping(value = "/")
+//@Controller
+//@RequestMapping(value = "/")
 public class GenerationController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(GenerationController.class);
