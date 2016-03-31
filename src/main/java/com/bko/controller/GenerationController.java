@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bko.domain.DeploymentRequest;
 import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
-import com.bko.viewresolver.util.Shell;
+import com.bko.viewresolver.util.SynergyShell;
 import com.jcraft.jsch.JSchException;
 
 /**
@@ -57,14 +57,14 @@ public class GenerationController {
     @Value("${ssh.key.pass}")
     private String ssh_key_pass;
     
-    private Shell shell;
+    private SynergyShell shell;
     
     private DeploymentRequest deploymentRequest;
     
     public void initialize_controller() throws JSchException{
     	
     	this.deploymentRequest = new DeploymentRequest();
-    	this.shell = new Shell();
+    	this.shell = new SynergyShell();
     	
     	
     	

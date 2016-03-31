@@ -17,7 +17,7 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
-public class Shell {
+public class SynergyShell {
 	public enum QueryField {
 		//%task, %name, %version, %type, %instance, %task_synopsis, %release
 		TASK(0), NAME(1), VERSION(2), TYPE(3), INSTANCE(4), TASK_SYNOPSIS(5), RELEASE(6);
@@ -95,11 +95,14 @@ public class Shell {
 	    session.setConfig("PreferredAuthentications", "publickey,keyboard-interactive,password");
 	    session.connect();
 	}
+	/**
+	 * This method gives the a DR's meta data such as source, destination synopsis of a DR
+	 * @param deploymentRequest
+	 * @throws JSchException
+	 * @throws IOException
+	 */
 	public void setDeploymentRequestInfo(DeploymentRequest deploymentRequest) throws JSchException, IOException{
-		channel = session.openChannel("exec");
-		channel_exec = (ChannelExec) channel;
-		String profile = "source $HOME/.profile;";
-		//problem_synopsis
+		
 		String drName = deploymentRequest.getDrName();
 		String query = "ccm query \"problem_type='dr' and dr_name = '"
 				+ drName 
@@ -108,17 +111,10 @@ public class Shell {
 				+ "                      -u -f \"%source_environment|%destination_environment|%problem_synopsis";
 		
 		
-		String complete_command = profile + query;
-		System.out.println("query:" + query);
-		channel_exec.setCommand(complete_command);
-		channel_exec.setErrStream(System.err);
-		
-		channel_exec.connect();
+		sessionConnectAndExecCommand(query);
 
 	    BufferedReader reader = new BufferedReader(new InputStreamReader(channel_exec.getInputStream()));
 	    String line;
-	    int j =0;
-	    //SynergyObject synergyObject;
 	    
 	    while ((line = reader.readLine()) != null) {
 	    	
@@ -133,30 +129,30 @@ public class Shell {
 
 	    }
 
-	    channel_exec.disconnect();
-	    //session.disconnect();
+	    //channel_exec.disconnect();
 
 	    System.out.println("Exit code: " + channel_exec.getExitStatus());
 		
 	}
+	/**
+	 * This method returns list of patches linked to a given DR drName
+	 * @param drName
+	 * @return
+	 * @throws JSchException
+	 * @throws IOException
+	 */
 	public List<Patch>  execute_query_patch_list(String drName) throws JSchException, IOException{
 		
         patchList = new ArrayList<Patch>();
 		
-		channel = session.openChannel("exec");
-		channel_exec = (ChannelExec) channel;
-		String profile = "source $HOME/.profile;";
 		String query = "ccm query \"problem_type='patch' and is_associated_patch_of(dr_name = '"
 				+ drName
 				+ "'"
 				+ ")\" "
 	    		+ "                      -u -f \"%reference|%group|%code|%crstatus|%evolution_type|%problem_synopsis";
 		
-		String complete_command = profile + query;
-		channel_exec.setCommand(complete_command);
-		channel_exec.setErrStream(System.err);
 		
-		channel_exec.connect();
+		sessionConnectAndExecCommand(query);
 
 	    BufferedReader reader = new BufferedReader(new InputStreamReader(channel_exec.getInputStream()));
 	    String line;
@@ -168,9 +164,6 @@ public class Shell {
 	    	patch  = new Patch();
 	    	String[] tokens = line.split("\\|");
 
-	    	System.out.print("Patch:" + tokens[0]);
-	    	System.out.print("Group:" + tokens[1]);
-	    	System.out.println("Subject:" + tokens[2]);
 	    	patch.setPatchId(tokens[0]);
 	    	patch.setNomGrp(tokens[1]);
 	    	patch.setSujPat(tokens[2]);
@@ -182,9 +175,6 @@ public class Shell {
 	    for (Patch p : patchList){
 	    	System.out.println("Object: " + p.getPatchId());
 	    }
-
-	    //channel_exec.disconnect();
-	    //session.disconnect();
 
 	    System.out.println("Exit code: " + channel_exec.getExitStatus());
 		return this.patchList;	
@@ -203,19 +193,27 @@ public class Shell {
 	public void setChannel(Channel channel) {
 		this.channel = channel;
 	}
-	public List<SynergyObject> execute_command(String command) throws JSchException, IOException{
-		
-		synergyObjects = new ArrayList<SynergyObject>();
-		
+	public void sessionConnectAndExecCommand(String query) throws JSchException{
 		channel = session.openChannel("exec");
 		channel_exec = (ChannelExec) channel;
-		String profile = "source $HOME/.profile;";
-		
-		String complete_command = profile + command;
+		String profile = ". $HOME/.profile;";
+		String complete_command = profile + query;
 		channel_exec.setCommand(complete_command);
 		channel_exec.setErrStream(System.err);
-		
 		channel_exec.connect();
+		
+	}
+	public List<SynergyObject> getObjectsLinkedToDR(String drName) throws JSchException, IOException{
+		
+		String query = "ccm query \"is_associated_cv_of(is_associated_task_of(is_associated_patch_of(dr_name = '"
+				+ drName
+				+ "'"
+				+ "))) \" "
+	    		+ "                      -u -f \"%task|%name|%version|%type|%instance|%task_synopsis|%release";
+		
+		synergyObjects = new ArrayList<SynergyObject>();
+
+		sessionConnectAndExecCommand(query);
 
 	    BufferedReader reader = new BufferedReader(new InputStreamReader(channel_exec.getInputStream()));
 	    String line;
@@ -223,14 +221,10 @@ public class Shell {
 	    SynergyObject synergyObject;
 	    
 	    while ((line = reader.readLine()) != null) {
-	    	//System.out.println("line:" + line);
 	    	String[] tokens = line.split("\\|");
-	    	//int i = QueryField.TASK;
-	    	//%task, %name, %version, %type, %instance, %task_synopsis, %release
-	    	System.out.print("TASK:" + tokens[QueryField.TASK.result()].trim());
-	    	System.out.print("-- NAME:" + tokens[QueryField.NAME.result()].trim());
-	    	System.out.println("-- VERSION:" + tokens[QueryField.VERSION.result()].trim());
 	    	
+	    	//%task, %name, %version, %type, %instance, %task_synopsis, %release
+    	
 	    	synergyObject = new SynergyObject();
 	    	synergyObject.setTask(tokens[QueryField.TASK.result()].trim());
 	    	synergyObject.setObject(tokens[QueryField.NAME.result()].trim());
@@ -245,9 +239,6 @@ public class Shell {
 	    for (SynergyObject obj : synergyObjects){
 	    	System.out.println("Object: " + obj.getObject());
 	    }
-
-	    //channel_exec.disconnect();
-	    //session.disconnect();
 
 	    System.out.println("Exit code: " + channel_exec.getExitStatus());
 		return this.synergyObjects;	
@@ -308,7 +299,7 @@ public class Shell {
 	    */
 		String query = "ccm query \"is_associated_cv_of(is_associated_task_of(is_associated_patch_of(dr_name = 'PACK-PRG-0037'))) \" "
 	    		+ "                      -u -f \"%task|%name|%version|%type|%instance|%task_synopsis|%release";
-		Shell shell = new Shell();
+		SynergyShell shell = new SynergyShell();
 		String key = "C:\\thalerng\\config\\bko_priv_rsa.ppk";
 		String pass = "bko";
 		shell.intialize_and_connect("scm.com.saas.i2s", "bkokobe", key, pass);

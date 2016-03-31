@@ -34,12 +34,13 @@ import com.bko.domain.Patch;
 import com.bko.domain.PatchMember;
 import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
-import com.bko.viewresolver.util.Shell;
+import com.bko.viewresolver.util.SynergyShell;
 import com.bko.viewresolver.util.SynergyObject;
 import com.jcraft.jsch.JSchException;
 
 
 @Component
+@Deprecated
 public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 	
 	private static final Logger log = LoggerFactory.getLogger(ExcelGeneratorFromTemplate.class);
@@ -69,7 +70,7 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 	
 	private Row rowPatchList, rowPatchMembersList, rowTransferOperationList, rowObjectList, row4,row5;
 	
-	private Shell shell;
+	private SynergyShell shell;
 	
 	private Sheet patchListSheetTab;
 	private Cell columnPatchListDRname;
@@ -121,7 +122,7 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 		// TODO Auto-generated method stub
 		
 		this.deploymentRequest = (DeploymentRequest) model.get("deploymentRequest");
-		this.shell             = (Shell) model.get("shell");
+		this.shell             = (SynergyShell) model.get("shell");
 		
 		this.patchList = this.deploymentRequest.getPatchList();
 
@@ -286,9 +287,11 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 		
 		
 	}
-	/*
-<<<<<<< HEAD
+	/**
 	 * This tab will contain the list of objects related to the DR
+	 * @param wb
+	 * @throws JSchException
+	 * @throws IOException
 	 */
 	public void generateObjectList(XSSFWorkbook wb) throws JSchException, IOException{
 		//TODO
@@ -298,17 +301,7 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 		log.info("Tab name:" + objectListTab.getSheetName());
 		
 		List<SynergyObject>  synergyObjects;
-		String query = "ccm query \"is_associated_cv_of(is_associated_task_of(is_associated_patch_of(dr_name = '"
-				+ this.deploymentRequest.getDrName()
-				+ "'"
-				+ "))) \" "
-	    		+ "                      -u -f \"%task|%name|%version|%type|%instance|%task_synopsis|%release";
-		//Shell shell = new Shell();
-		String host = this.deploymentRequest.getHostName();
-		String login = this.deploymentRequest.getHostLogin();
-		String password = this.deploymentRequest.getHostPassword();
-		//shell.intialize_and_connect(host, login, password);
-		synergyObjects = this.shell.execute_command(query);
+		synergyObjects = this.shell.getObjectsLinkedToDR(this.deploymentRequest.getDrName());
 		
 		for (SynergyObject synObject:  synergyObjects){
 			System.out.println("****Task: " + synObject.getTask());
@@ -332,11 +325,10 @@ public class ExcelGeneratorFromTemplate extends AbstractPOIExcelView {
 		}
 	    
 	}
-	/*
-=======
->>>>>>> 705648a88b089efef9ae9a6b68c1902379dcc7c5
+	/**
 	 * This tab/excel sheet will contain the following columns
 	 * REFPAT	STAPAT	NOMGRP	TYPEVL	SUBJECT	SYNOPSIS
+	 * @param wb
 	 */
 	public void generatePtchList(XSSFWorkbook wb){
 

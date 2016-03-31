@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import com.bko.domain.DeploymentRequest;
 import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
-import com.bko.viewresolver.util.Shell;
+import com.bko.viewresolver.util.SynergyShell;
 import com.jcraft.jsch.JSchException;
 
 public class BaseController {
@@ -40,7 +40,7 @@ public class BaseController {
     @Value("${ssh.key.pass}")
     protected String ssh_key_pass;
     
-    protected Shell shell;
+    protected SynergyShell shell;
     
     
     protected DeploymentRequest deploymentRequest;
@@ -48,7 +48,7 @@ public class BaseController {
     public void initialize_controller() throws JSchException{
     	
     	this.deploymentRequest = new DeploymentRequest();
-    	this.shell = new Shell();
+    	this.shell = new SynergyShell();
     	
     	
     	
@@ -56,7 +56,6 @@ public class BaseController {
 		this.deploymentRequest.setHostLogin(host_login);
 		this.deploymentRequest.setHostPassword(host_password);
     	
-    	int length = this.host_password.length();//for debu purpose --> TODO REMOVE
 		if (this.host_password.length() != 0)
 			this.shell.intialize_and_connect(host_name, host_login, host_password);
 		else
@@ -65,7 +64,7 @@ public class BaseController {
 		
     }
     
-    public void set_DR(DeploymentRequest deploymentRequest){
+    public void setDeploymentRequest(DeploymentRequest deploymentRequest){
     	
     	String deploymentRequestName = deploymentRequest.getDrName();
 		
@@ -77,9 +76,8 @@ public class BaseController {
 		deploymentRequest.setNumberOfSubjects(deploymentRequestService.getNumberOfSubjects(deploymentRequestName));
     	
     }
-    public void set_DR(String deploymentRequestName){
+    public void setDeploymentRequest(String deploymentRequestName){
     	
-    	//this.deploymentRequest = new DeploymentRequest();
 		this.deploymentRequest.setDrName(deploymentRequestName);
 		this.deploymentRequest.setPatchList(deploymentRequestService.getPatchList(deploymentRequestName));
 		this.deploymentRequest.setNumberOfPatches(deploymentRequestService.getNumberOfPatches(deploymentRequestName));

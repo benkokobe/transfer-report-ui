@@ -29,6 +29,7 @@ import com.bko.service.DeploymentRequestService;
 import com.bko.service.PatchService;
 
 @Component
+@Deprecated
 public class ExcelGenerator extends AbstractExcelView {
 
 	private PatchService patchService;
