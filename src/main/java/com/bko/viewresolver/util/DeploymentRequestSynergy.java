@@ -36,9 +36,9 @@ public class DeploymentRequestSynergy {
 		this.deploymentRequest = deploymentRequest;
 	}
 
-	public void getPatchList() throws JSchException, IOException {
+	public void setPatchList() throws JSchException, IOException {
 
-		patchList = this.synergyShell.execute_query_patch_list(this.deploymentRequest.getDrName());
+		patchList = this.synergyShell.getPatchLinkedToDr(this.deploymentRequest.getDrName());
 		this.deploymentRequest.setPatchList(patchList);
 
 	}

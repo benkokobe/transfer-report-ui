@@ -25,7 +25,8 @@ public class ExcelViewResolver implements ViewResolver{
 		
 		//ExcelGenerator view = new ExcelGenerator();
 		//ExcelGeneratorFromTemplate view = new ExcelGeneratorFromTemplate();
-		ExcelGeneratorFromTemplate2 view = new ExcelGeneratorFromTemplate2();
+		//ExcelGeneratorFromTemplate2 view = new ExcelGeneratorFromTemplate2();
+		ReleaseExcelGenerator  view = new ReleaseExcelGenerator();
 		//view.setPatchService(patchService);
 		view.setDeploymentRequestService(deploymentRequestService);
 		//System.out.println("ExcelViewResolver:" + deploymentRequestService.getNumberOfPatches("PACK-PND-0691"));

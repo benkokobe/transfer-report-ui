@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.bko.domain.DeploymentRequest;
 import com.jcraft.jsch.JSchException;
 
-@Controller
-@RequestMapping(value = "/")
+//@Controller
+//@RequestMapping(value = "/")
 public class ReleaseReportController extends BaseController {
 
 	private static final Logger logger = LoggerFactory.getLogger(ReleaseReportController.class);

@@ -74,6 +74,17 @@ public class SynergyShell {
 	    session.setConfig("StrictHostKeyChecking", "no");
 	    session.connect();
 	}
+	
+	public void sessionConnectAndExecCommand(String query) throws JSchException{
+		channel = session.openChannel("exec");
+		channel_exec = (ChannelExec) channel;
+		String profile = ". $HOME/.profile;";
+		String complete_command = profile + query;
+		channel_exec.setCommand(complete_command);
+		channel_exec.setErrStream(System.err);
+		channel_exec.connect();
+		
+	}
 	/*
 	 * 
 	 */
@@ -94,6 +105,52 @@ public class SynergyShell {
 	    session.setConfig("StrictHostKeyChecking", "no");
 	    session.setConfig("PreferredAuthentications", "publickey,keyboard-interactive,password");
 	    session.connect();
+	}
+	public boolean hasLinkedDRs(String drName) throws JSchException, IOException{
+		String query = "ccm query \"has_associated_dr(dr_name='"
+				+ drName
+				+ "'"
+				+ ")\" "
+				+ "-u -f \"%dr_name\"";
+		sessionConnectAndExecCommand(query);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(channel_exec.getInputStream()));
+		String line;
+
+		line = reader.readLine();
+		if ( line == null){
+			System.out.println("No linked DR's");
+			return false;
+		} else{
+			System.out.println("There are linked DR's");
+		  return true;
+		}
+	}
+	public List<DeploymentRequest> getLinkedDeploymentRequests(String drName) throws JSchException, IOException{
+		
+		//ccm query "has_associated_dr(dr_name='PACK-TST-0031')" -u -f "%dr_name"
+		String query = "ccm query \"has_associated_dr(dr_name='"
+				+ drName
+				+ "'"
+				+ ")\" "
+				+ "-u -f \"%dr_name\"";
+		sessionConnectAndExecCommand(query);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(channel_exec.getInputStream()));
+		String line;
+       
+		List<DeploymentRequest> linkedDeploymentRequest = new ArrayList<DeploymentRequest>();
+		while ((line = reader.readLine()) != null) {
+	    	
+	    	String[] tokens = line.split(" ");
+	    	DeploymentRequest deploymentRequest = new DeploymentRequest();
+	    	
+	    	System.out.println("Linked DR name:" + tokens[0]);
+	    	deploymentRequest.setDrName(tokens[0]);
+
+	    	linkedDeploymentRequest.add(deploymentRequest);
+	    }
+		return linkedDeploymentRequest;
+		
+		
 	}
 	/**
 	 * This method gives the a DR's meta data such as source, destination synopsis of a DR
@@ -141,7 +198,7 @@ public class SynergyShell {
 	 * @throws JSchException
 	 * @throws IOException
 	 */
-	public List<Patch>  execute_query_patch_list(String drName) throws JSchException, IOException{
+	public List<Patch>  getPatchLinkedToDr(String drName) throws JSchException, IOException{
 		
         patchList = new ArrayList<Patch>();
 		
@@ -192,16 +249,6 @@ public class SynergyShell {
 	}
 	public void setChannel(Channel channel) {
 		this.channel = channel;
-	}
-	public void sessionConnectAndExecCommand(String query) throws JSchException{
-		channel = session.openChannel("exec");
-		channel_exec = (ChannelExec) channel;
-		String profile = ". $HOME/.profile;";
-		String complete_command = profile + query;
-		channel_exec.setCommand(complete_command);
-		channel_exec.setErrStream(System.err);
-		channel_exec.connect();
-		
 	}
 	public List<SynergyObject> getObjectsLinkedToDR(String drName) throws JSchException, IOException{
 		
@@ -297,15 +344,22 @@ public class SynergyShell {
 
 	    System.out.println("Exit code: " + ce.getExitStatus());
 	    */
-		String query = "ccm query \"is_associated_cv_of(is_associated_task_of(is_associated_patch_of(dr_name = 'PACK-PRG-0037'))) \" "
-	    		+ "                      -u -f \"%task|%name|%version|%type|%instance|%task_synopsis|%release";
+//		String query = "ccm query \"is_associated_cv_of(is_associated_task_of(is_associated_patch_of(dr_name = 'PACK-PRG-0037'))) \" "
+//	    		+ "                      -u -f \"%task|%name|%version|%type|%instance|%task_synopsis|%release";
+		
+		String query = "ccm query \"has_associated_dr(dr_name='"
+				+ "PACK-ACP-0011"
+				+ "'"
+				+ "\" "
+				+ "-u -f \"%dr_name";
 		SynergyShell shell = new SynergyShell();
 		String key = "C:\\thalerng\\config\\bko_priv_rsa.ppk";
 		String pass = "bko";
 		shell.intialize_and_connect("scm.com.saas.i2s", "bkokobe", key, pass);
 		//shell.execute_command(query);
-		String drName = "PACK-PRG-0037";
-		shell.execute_query_patch_list(drName);
+		String drName = "PACK-ACP-0011";
+		shell.hasLinkedDRs(drName);
+		//shell.execute_query_patch_list(drName);
 		
 		
 	}

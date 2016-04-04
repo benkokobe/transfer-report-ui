@@ -114,7 +114,7 @@ public class BaseExcelGeneratorFromTemplate {
 
 		this.deploymentRequestSynergy.setShell(shell);
 		this.deploymentRequestSynergy.setObjectsLinkedToDR(drName);
-		this.deploymentRequestSynergy.getPatchList();
+		this.deploymentRequestSynergy.setPatchList();
 		this.deploymentRequestSynergy.setDeploymentRequestInfo(this.deploymentRequest);
 
 		this.deploymentRequest

@@ -1,5 +1,6 @@
 package com.bko.domain;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.bko.viewresolver.util.SynergyObject;
@@ -28,6 +29,16 @@ public class DeploymentRequest {
 	public void setDeploymentRequestTransferOperation(List<DeploymentRequestTransferOperation> deploymentRequestTransferOperation) {
 		this.deploymentRequestTransferOperation = deploymentRequestTransferOperation;
 	}
+	
+	HashMap<String, List<String>> types = new HashMap<String, List<String>>();
+	
+	public HashMap<String, List<String>> getTypes() {
+		return types;
+	}
+	public void setTypes(HashMap<String, List<String>> types) {
+		this.types = types;
+	}
+	
 	private int numberOfPatches;
 	private int numberOfTransferOperations;
 	private int numberOfManualTransferOperations;
